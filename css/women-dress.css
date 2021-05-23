@@ -1,7 +1,8 @@
-* {
-    box-sizing: border-box
-}
+*{
 
+    box-sizing: border-box;
+
+}
 header {
     background-color: #0b172a;
 }
@@ -30,6 +31,32 @@ nav ul li a {
     right: 84px;
     top: 87px;
 }
+
+.container{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.image {
+margin: 20px;
+
+}
+
+img{
+    height: 250px;
+    width: 200px;
+}    
+#firstImg{
+margin: 10px;
+
+}
+
+
+
 
 
 
