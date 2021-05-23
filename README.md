@@ -19,4 +19,4 @@ with customizing the order "_
 ![main page](img/wireframe/efd71c2c5aff4ef8b2d4ddca25fffdf7.png)
 
 <!-- other page  -->
-![other page](img/wireframe/women - man - shoes acc page.jpg)
+![other page](img/wireframe/women.man.shoesacc,page.jpg)
