@@ -40,17 +40,117 @@ h1{
     position: relative;
 }
 
-.our_team .pic ::before
+.our_team .pic::before
 {
     content: "";
     width: 100%;
     height: 0;
     border-radius: 50%;
-    background-color:#1785eb;
+    background:#1785eb;
     position: absolute;
     bottom: 135%;
     right: 0;
     left: 0;
     opacity: 0.2;
-    transform: scale();
+    transform: scale(3);
+    transition: all 0.3s  linear 0s;
 }
+ .our_team:hover .pic::before
+ {
+height: 100%;
+ }
+ .our_team .pic:after
+ {
+     content: " ";
+     width: 100%;
+     height:100%;
+     border-radius: 50%;
+     background:#1785eb;
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: -1;
+
+ }
+ .our_team .pic img
+ {
+     width: 100%;
+     height: auto;
+     border-radius: 50%;
+     transform: scale(1);
+     transition: all 0.9s ease 0;
+ }
+ .our_team:hover .pic img 
+ {
+box-shadow: 0 0 0 14px #f7f5ec;
+transform: scale(0.7);
+ }
+
+ .our_team .team_Content
+ {
+     margin-bottom: 30px;
+
+ }
+ .our_team .title
+ {
+     font-size: 22px;
+     font-weight: 700;
+     color:#4e5052;
+     letter-spacing: 1px;
+     margin-bottom: 5px;
+
+ }
+
+ .our_team .post
+ {
+     display: block;
+     font-size: 15px;
+     color:#4e5052 ;
+ }
+ .our_team .social
+ {
+     width: 100%;
+     padding: 0;
+     margin: 0;
+     background:#1785eb;
+     position: absolute;
+     bottom: -100px;
+     left: 0;
+     transition: all 0.5s ease 0s;
+
+
+ }
+ .our_team:hover .social
+ {
+     bottom:0;
+ }
+ .our_team .social .li
+ {
+     display: inline-block;
+ }
+ .our_team .social .li a
+ {
+     text-decoration: none;
+     display: block;
+     padding: 10px;
+     font-size: 17px;
+     color: #fff;
+     transition: all 0.3s  ease 0s;
+ }
+ .our_team .social.li a:hover
+ {
+     color: #1785eb;
+     background: #f7f5ec;
+ }
+ @media (max-width: 720px)
+ {
+     .Containor
+     {
+         flex-direction: column;
+     }
+     .our_team
+     {
+         width: 80%;
+         margin-top: 30px;
+     }
+ }
