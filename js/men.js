@@ -39,20 +39,13 @@ let RightElement = document.getElementById("Right-image");
 
 
 
-
-
-
-
-
-
-
-
 // -------------------- constructore function for the img 
 
 function MenImges (name , source ,price){
     this.name=name;
     this.source=source;
     this.price=price;
+    this.vote=0;
 
     allProduct.push(this);
 }
@@ -102,12 +95,12 @@ new MenImges("ronaldo", "../img/menImg/img1.jpg", 300);
             p.textContent=`${allProduct[i].price}`
             let buttun =document.createElement('button');
             div[i].appendChild(buttun);
-            buttun.textContent='add to boic'
+            buttun.textContent='add to pok'
             buttun.onclick= function () {
                 if(typeof(Storage) !== "undefined") {
                   if (localStorage.clickcount) {
                     localStorage.clickcount = Number(localStorage.clickcount)+1;
-                    alert('added to boic')
+                    alert('added to pok');
                   } else {
                     localStorage.clickcount = 1;
                   }
@@ -136,13 +129,16 @@ new MenImges("ronaldo", "../img/menImg/img1.jpg", 300);
     
     function clicker (event){
         if(event.target.id==="left-image"){
-            location.href = "../pages/prodect.html";
+            // location.href = "../pages/prodect.html";
+            allProduct[0].vote++;
         }
         else if(event.target.id==="Center-image"){
-            location.href = "../pages/prodect.html";
+            // location.href = "../pages/prodect.html";
+            allProduct[1].vote++;
         }
         else if(event.target.id==="Right-image"){
-            location.href = "../pages/prodect.html";
+            // location.href = "../pages/prodect.html";
+            allProduct[2].vote++;
             
         }
 
