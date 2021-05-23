@@ -1,9 +1,9 @@
 /* Slideshow container */
 
 .slideshow-container {
-    max-width: 1000px;
-    position: relative;
+    max-width: 1300px;
     margin: auto;
+    margin-top: 33px;
 }
 
 
@@ -19,7 +19,6 @@
 .prev,
 .next {
     cursor: pointer;
-    position: absolute;
     top: 50%;
     width: auto;
     margin-top: -22px;
@@ -55,7 +54,6 @@
     color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;
-    position: absolute;
     bottom: 8px;
     width: 100%;
     text-align: center;
@@ -68,7 +66,6 @@
     color: #a83434;
     font-size: 12px;
     padding: 8px 12px;
-    position: absolute;
     top: 0;
 }
 
@@ -125,4 +122,82 @@
 
 .socialMediaListImg {
     width: 60px;
+}
+
+
+/* //////////////////////// */
+
+#ourHistory {
+    top: 130px;
+}
+
+.h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.leftp {
+    text-align: justify;
+    float: left;
+    width: 600px;
+    top: 100px;
+    left: 63px;
+}
+
+.rightp {
+    text-align: justify;
+    float: right;
+    width: 600px;
+    top: 325px;
+    left: 620px;
+}
+
+.leftp2 {
+    text-align: justify;
+    float: right;
+    width: 600px;
+    top: 478px;
+    left: 120px;
+}
+
+.rightimg {
+    float: right;
+    right: 132px;
+    top: 80px;
+    width: 360px;
+}
+
+.rightimg2 {
+    top: 427px;
+    left: 820px;
+    width: 360px;
+}
+
+.leftimg {
+    float: left;
+    top: 200px;
+    left: 100px;
+    width: 360px;
+}
+
+
+/* ///////////////////////// */
+
+#HotOffer {
+    top: 740px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-right: 10px;
+}
+
+
+/* //////////////////////////// */
+
+#HowToOrder {
+    top: 640px;
+}
+
+#socialMedia {
+    top: 740px;
 }
