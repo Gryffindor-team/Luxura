@@ -2,8 +2,9 @@
 
 .slideshow-container {
     max-width: 1300px;
-    margin: auto;
     margin-top: 33px;
+    position: relative;
+    margin: auto;
 }
 
 
@@ -19,6 +20,7 @@
 .prev,
 .next {
     cursor: pointer;
+    position: absolute;
     top: 50%;
     width: auto;
     margin-top: -22px;
@@ -54,6 +56,7 @@
     color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;
+    position: absolute;
     bottom: 8px;
     width: 100%;
     text-align: center;
@@ -63,9 +66,10 @@
 /* Number text (1/3 etc) */
 
 .numbertext {
-    color: #a83434;
+    color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
+    position: absolute;
     top: 0;
 }
 
@@ -129,6 +133,7 @@
 
 #ourHistory {
     top: 130px;
+    margin-top: 80px;
 }
 
 .h2 {
@@ -136,7 +141,8 @@
     font-size: 30px;
 }
 
-.leftp {
+
+/* .leftp {
     text-align: justify;
     float: left;
     width: 600px;
@@ -158,25 +164,20 @@
     width: 600px;
     top: 478px;
     left: 120px;
-}
+} */
 
 .rightimg {
     float: right;
-    right: 132px;
-    top: 80px;
     width: 360px;
 }
 
 .rightimg2 {
-    top: 427px;
-    left: 820px;
+    float: right;
     width: 360px;
 }
 
 .leftimg {
     float: left;
-    top: 200px;
-    left: 100px;
     width: 360px;
 }
 
@@ -184,11 +185,12 @@
 /* ///////////////////////// */
 
 #HotOffer {
-    top: 740px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    margin-right: 10px;
+    margin-left: 160px;
+    margin-bottom: 90px;
+    margin-top: 50px;
 }
 
 
@@ -199,9 +201,18 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    margin-right: 10px;
+    margin-left: 160px;
+    margin-bottom: 90px;
+    margin-top: 50px;
 }
 
 #socialMedia {
     top: 740px;
+}
+
+
+/* //////////////////////////////// */
+
+footer {
+    text-align: center;
 }
