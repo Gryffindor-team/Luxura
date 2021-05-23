@@ -1,0 +1,28 @@
+header {
+    background-color: #0b172a;
+}
+
+.mainLogo {
+    width: 250px;
+}
+
+nav {
+    float: right;
+    margin-right: 304px;
+    margin-top: 112px;
+}
+
+nav ul li a {
+    padding: 20px;
+    margin: 12px;
+    font-size: 20px;
+    text-decoration: none;
+    color: blanchedalmond;
+}
+
+.cartLogo {
+    width: 50px;
+    background-color: blanchedalmond;
+    right: 84px;
+    top: 87px;
+}

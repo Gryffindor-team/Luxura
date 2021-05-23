@@ -1,26 +1,26 @@
-body{
+/* body {
     margin: 0;
-    padding:100px 0px;
+    padding: 100px 0px;
     height: 100px;
     box-sizing: border-box0;
     font-family: sans-serif;
-}
-h1{
+} */
+
+h1 {
     text-align: center;
     color: #1785eb;
     font-size: 45px;
 }
-.Containor
-{
+
+.Containor {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 80%;
-    margin:auto;
-
+    margin: auto;
 }
-.our_team
-{
+
+.our_team {
     background-color: #f7f5ec;
     text-align: center;
     overflow: hidden;
@@ -28,10 +28,9 @@ h1{
     margin: 0px 25px;
     padding: 30px 70px;
     width: 30%;
-
 }
-.our_team .pic
-{
+
+.our_team .pic {
     display: inline-block;
     width: 130px;
     height: 130px;
@@ -40,13 +39,16 @@ h1{
     position: relative;
 }
 
-.our_team .pic::before
-{
+
+.our_team .pic ::before {
+
     content: "";
     width: 100%;
     height: 0;
     border-radius: 50%;
-    background:#1785eb;
+
+    background-color: #1785eb;
+
     position: absolute;
     bottom: 135%;
     right: 0;
