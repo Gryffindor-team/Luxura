@@ -1,156 +1,242 @@
-body{
+
+*{
     margin: 0;
-    padding:100px 0px;
-    height: 100px;
-    box-sizing: border-box0;
-    font-family: sans-serif;
+    padding: 0;
+   
+    box-sizing: border-box;
 }
-h1{
+html
+{
+font-size: 1em;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+section
+{
+    padding: 10rem 0;
+    background: #fff;
+
+
+}
+.heading
+{
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    margin-bottom: 5rem;
     text-align: center;
-    color: #1785eb;
-    font-size: 45px;
+    color:#333;
+    position: relative;
+    
 }
-.Containor
+.heading::after
+{
+    content: '';
+    width: 20rem;
+    height: 0.8rem;
+    background: #6D214f;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+
+}
+ 
+.card_wrapper
 {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 80%;
-    margin:auto;
+    align-content: center;
+    flex-direction: column;
+
 
 }
-.our_team
+.card
 {
-    background-color: #f7f5ec;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    margin: 0px 25px;
-    padding: 30px 70px;
-    width: 30%;
+width :25rem;
+background: #ebeef8;
+display: flex;
+flex-direction: column;
+align-items:center;
+justify-content: center;
+margin:2rem 0;
+box-shadow: .5rem .5rem .3rem rgb(0, 0,0,0.2);
+
 
 }
-.our_team .pic
+.card .card_img
 {
-    display: inline-block;
-    width: 130px;
-    height: 130px;
-    margin-bottom: 0px;
-    z-index: 1;
-    position: relative;
-}
-
-.our_team .pic::before
-{
-    content: "";
     width: 100%;
-    height: 0;
-    border-radius: 50%;
-    background:#1785eb;
-    position: absolute;
-    bottom: 135%;
-    right: 0;
-    left: 0;
-    opacity: 0.2;
-    transform: scale(3);
-    transition: all 0.3s  linear 0s;
+    height: 26rem;
+    object-fit: cover;
+    clip-path: polygon(0 0,100% 0%, 100% 69%, 0% 100%); 
 }
- .our_team:hover .pic::before
- {
-height: 100%;
- }
- .our_team .pic:after
- {
-     content: " ";
-     width: 100%;
-     height:100%;
-     border-radius: 50%;
-     background:#1785eb;
-     position: absolute;
-     top: 0;
-     left: 0;
-     z-index: -1;
+.profile_img
+{
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -9rem;
+    border: 1rem solid #ebeef8;
+    z-index: 1;
+}
+.card h1
+{
+font-size: 2.5rem;
+color: #333;
+margin: 1,5rem 0;
+}
+.job_title
+{
+    color: #777;
+    font-size: 2rem;
+    font-weight: 700;
+}
 
- }
- .our_team .pic img
- {
-     width: 100%;
-     height: auto;
-     border-radius: 50%;
-     transform: scale(1);
-     transition: all 0.9s ease 0;
- }
- .our_team:hover .pic img 
- {
-box-shadow: 0 0 0 14px #f7f5ec;
-transform: scale(0.7);
- }
+.about
+{
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    color: #333;
+    font-weight: 500;
+}
+.card .btn
+{
+    padding: 1rem 2.5rem;
+    background: #445ae3;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    margin: 1rem 0; 
+    transition: all .5s;
 
- .our_team .team_Content
- {
-     margin-bottom: 30px;
+}
+.card .btn:hover
+{
+    color: #333;
+    background: #70a1ff;
+    transform: translateY(-4px);
+    box-shadow: .5rem .5rem 2rem #70a1ff;
 
- }
- .our_team .title
- {
-     font-size: 22px;
-     font-weight: 700;
-     color:#4e5052;
-     letter-spacing: 1px;
-     margin-bottom: 5px;
+}
+.card .btn:active
+{
+    color: #eee;
+    transform: translateY(0px);
+    box-shadow: none;
+    background: #111;
 
- }
+}
+.socail_media
+{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgb(0, 0,0,0.3);
 
- .our_team .post
- {
-     display: block;
-     font-size: 15px;
-     color:#4e5052 ;
- }
- .our_team .social
- {
-     width: 100%;
-     padding: 0;
-     margin: 0;
-     background:#1785eb;
-     position: absolute;
-     bottom: -100px;
-     left: 0;
-     transition: all 0.5s ease 0s;
+}
+.socail_media i
+{
+font-size: 2.5rem;
+transition: all .5s;
+color: #666;
 
+}
+.fa-facebook:hover
+{
+    color: #3b5999;
+    transform: translateY(-0.5rem);
+    text-shadow: .5rem .5rem .5rem #3867d6;
 
- }
- .our_team:hover .social
- {
-     bottom:0;
- }
- .our_team .social .li
- {
-     display: inline-block;
- }
- .our_team .social .li a
- {
-     text-decoration: none;
-     display: block;
-     padding: 10px;
-     font-size: 17px;
-     color: #fff;
-     transition: all 0.3s  ease 0s;
- }
- .our_team .social.li a:hover
- {
-     color: #1785eb;
-     background: #f7f5ec;
- }
- @media (max-width: 720px)
- {
-     .Containor
-     {
-         flex-direction: column;
-     }
-     .our_team
-     {
-         width: 80%;
-         margin-top: 30px;
-     }
- }
+}
+.fa-instagram:hover
+{
+    color: #6d214f;
+    transform: translateY(-0.5rem);
+    text-shadow: .5rem .5rem .5rem #6d214f;
+}
+.fa-twitter:hover
+{
+    color: #55acee;
+    transform: translateY(-0.5rem);
+    text-shadow: .5rem .5rem .5rem #55e6c1;
+}
+.fa-linkedin:hover
+{
+    color: #0652dd;
+    transform: translateY(-0.5rem);
+    text-shadow: .5rem .5rem .5rem #1b9cfc;
+}
+@media screen and (min-width:700px) 
+{
+    .card_wrapper
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .card
+    {
+        margin: 2rem;
+        transition: opacity 0.5s;
+
+    }
+    @keyframes fadeIn {
+        from
+        {
+            opacity: 0;
+        }
+        to
+        {
+            opacity: 1;
+        }
+
+    }
+    .card:nth-child(1)
+    {
+        animation: fadeIn.5s .5s backwards;
+    }
+    .card:nth-child(2)
+    {
+        animation: fadeIn.5s .1s backwards;
+    }
+    .card:nth-child(3)
+    {
+        animation: fadeIn.5s .2s backwards;
+    }
+    .card:nth-child(4)
+    {
+        animation: fadeIn.5s 1.5s backwards;
+    }
+    .card:nth-child(5)
+    {
+        animation: fadeIn.5s .3s backwards;
+    }
+    .card:nth-child(6)
+    {
+        animation: fadeIn.5s .5s backwards;
+    }
+    .card:hover
+    {
+        transform: scale(1.05);
+        transition: all .8s;
+    }
+
+    
+}
