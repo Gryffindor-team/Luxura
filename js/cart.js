@@ -3,6 +3,10 @@
 
 ///------------- function to display the items 
 
+
+// let userName =prompt('please enter your name for Booking the oreder');
+// let userNumber =Number(prompt('please enter your number'));
+
 function render() {
     let cartItems = localStorage.getItem('prodectInCart')
     cartItems = JSON.parse(cartItems)
@@ -77,7 +81,7 @@ function manageQuantity() {
             // console.log(currentProduct);
 
             if( cartItems[currentProduct].Vote > 1 ) {
-                cartItems[currentProduct].Vote -= 1;
+                cartItems[currentProduct].Vote = cartItems[currentProduct].Vote - 1;
                 cartNumber(cartItems[currentProduct], "decrease");
                 totalCost(cartItems[currentProduct], "decrease");
                 localStorage.setItem('prodectInCart', JSON.stringify(cartItems));
@@ -121,8 +125,8 @@ function deleteButtons() {
         deleteButtons[i].addEventListener('click', () => {
             productName = deleteButtons[i].parentElement.textContent.toLocaleLowerCase().replace(/ /g,'').trim();
            
-            localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].Vote);
-            localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price * cartItems[productName].Vote));
+            localStorage.setItem('cartNumbers', (productNumbers - cartItems[productName].Vote));
+            localStorage.setItem('totalCost', (cartCost - ( cartItems[productName].price * cartItems[productName].Vote)));
 
             delete cartItems[productName];
             localStorage.setItem('prodectInCart', JSON.stringify(cartItems));
@@ -141,5 +145,21 @@ confirm.appendChild(butConfirm);
 butConfirm.textContent='confirm order'
 
 butConfirm.addEventListener('click',() =>{
-    alert('your order is confirmed');
+    alert(`your order will  Booked after submit the form thank you\n and we wiil wait you `);
+    localStorage.clear();
+
+    
+  let form =  document.getElementById('form').style.visibility='visible'
+
+  
+let submit =document.getElementById('submit');
+form.appendChild(submit);
+submit.addEventListener('submit',()=>{
+    
+    // document.getElementById('form').style.visibility='hidden'
+    
+    
+   
+})
+
 })
