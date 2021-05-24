@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 /* Slideshow container */
 
 .slideshow-container {
@@ -138,17 +140,20 @@
 
 .h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 45px;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 60px;
 }
 
-
-/* .leftp {
+.leftp {
+    width: 701px;
     text-align: justify;
-    float: left;
-    width: 600px;
-    top: 100px;
-    left: 63px;
+    font-size: 22px;
+    margin-bottom: 190px;
 }
+
+
+/* 
 
 .rightp {
     text-align: justify;
@@ -169,6 +174,8 @@
 .rightimg {
     float: right;
     width: 360px;
+    margin-top: -279px;
+    margin-right: 57px;
 }
 
 .rightimg2 {
