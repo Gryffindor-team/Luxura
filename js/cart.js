@@ -132,3 +132,13 @@ function deleteButtons() {
         })
     }
 }
+
+
+let confirm =document.getElementsByClassName('product')[0];
+let butConfirm =document.createElement('button');
+confirm.appendChild(butConfirm);
+butConfirm.textContent='confirm order'
+
+butConfirm.addEventListener('click',() =>{
+    alert('your order is confirmed');
+})
