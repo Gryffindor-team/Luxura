@@ -39,9 +39,15 @@ function MenImges (name , source ,price){
 }
   
 
-new MenImges("ronaldo", "../img/menImg/img1.jpg",200);
-new MenImges("messi", "../img/menImg/img1.jpg", 200);
-new MenImges("mbabe", "../img/menImg/img1.jpg", 300);
+new MenImges("black-suit", "../img/menImg/img1.jpg",200);
+new MenImges("blue-suit", "../img/menImg/img1.jpg", 200);
+new MenImges("red-suit", "../img/menImg/img1.jpg", 200);
+new MenImges("black-tuxedo", "../img/menImg/img1.jpg",400);
+new MenImges("blue-tuxedo", "../img/menImg/img1.jpg", 400);
+new MenImges("red-tuxedo", "../img/menImg/img1.jpg", 400);
+new MenImges("gray-suit", "../img/menImg/img1.jpg",200);
+new MenImges("gray-tuxedo", "../img/menImg/img1.jpg", 400);
+new MenImges("ronaldo-suit", "../img/menImg/img1.jpg", 500);
 
 
   
@@ -61,7 +67,7 @@ new MenImges("mbabe", "../img/menImg/img1.jpg", 300);
   function oldNumberCart (){
     let prodectNubmer =localStorage.getItem('cartNumbers');
     if(prodectNubmer){
-      // document.getElementById('cartLogoNumber').textContent=prodectNubmer;
+      document.getElementById('cartLogoNum').textContent=prodectNubmer;
     }
   }
 
@@ -73,12 +79,12 @@ new MenImges("mbabe", "../img/menImg/img1.jpg", 300);
 
      if(prodectNubmer){
   localStorage.setItem('cartNumbers', prodectNubmer + 1);
-  // document.getElementById('cartLogoNumber').textContent=prodectNubmer+1;
+  document.getElementById('cartLogoNum').textContent=prodectNubmer+1;
   }
     else{
 
   localStorage.setItem('cartNumbers',1);
-  // document.getElementById('cartLogoNumber').textContent=+1;
+  document.getElementById('cartLogoNum').textContent=+1;
 }
 setItems(prodects);
     }

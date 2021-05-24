@@ -18,7 +18,7 @@ function render() {
         <div class="product">
         <ion-icon class="delete" name="close-circle"></ion-icon>
 
-        <img src="../img/menImg/img1.jpg" id='pro' width="100px' height="100px">
+        <img src="../img/menImg/${item.name}.jpg" id='pro' width="60px' height="60px">
                         <span>${item.name}</span> 
 
                     </div>
@@ -43,6 +43,7 @@ function render() {
             <div class="basketTotalContainer">
                 <h4 class="basketTotalTitle"> Total</h4>
                 <h4 class="basketTotal">$${cartCost},00</h4>
+                <div id ="for-confirm"></div>
             </div>`
 
             deleteButtons();
@@ -134,7 +135,7 @@ function deleteButtons() {
 }
 
 
-let confirm =document.getElementsByClassName('product')[0];
+let confirm =document.getElementById('for-confirm');
 let butConfirm =document.createElement('button');
 confirm.appendChild(butConfirm);
 butConfirm.textContent='confirm order'
