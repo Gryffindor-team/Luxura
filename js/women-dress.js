@@ -81,7 +81,7 @@ function onLoadCartNumbers(){
     let productNumbers= localStorage.getItem('cartNumber');
 
     if(productNumbers){
-        document.querySelector('.cart span').textContent = productNumbers;
+      //  document.querySelector('.cart span').textContent=productNumbers;
     }
 
 }
@@ -94,11 +94,11 @@ function cartNumbers(allDress){
     
     if(productNumbers){
         localStorage.setItem('cartNumber', productNumbers +1);
-        document.querySelector('.cart span').textContent = productNumbers + 1;
+        //document.querySelector('.cart span').textContent= productNumbers + 1;
 
     }else{
         localStorage.setItem('cartNumber' ,1);
-        document.querySelector('.cart span').textContent=1;
+       // document.querySelector('.cart span').textContent=1;
     }
 
     setItem(allDress);
@@ -138,9 +138,6 @@ function totalCost(product){
 //console.log("the product price is", product.price);
 let cartCost = localStorage.getItem('totalCost');
 
-console.log('my cartcost is', cartCost);
-console.log(typeof cartCost);
-
 if (cartCost != null){
 cartCost=parseInt(cartCost);
 localStorage.setItem('totalCost', cartCost + product.price);
@@ -154,7 +151,7 @@ localStorage.setItem('totalCost', cartCost + product.price);
 
 }
 
-
+onLoadCartNumbers();
 
 
 // ------ adding to cart html page  ---------------
@@ -204,6 +201,5 @@ function displayCart(){
 }
 }
 
-onLoadCartNumbers();
 displayCart();
 
