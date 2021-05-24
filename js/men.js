@@ -1,4 +1,4 @@
-"use strict" 
+"use strict";
 
 console.log("hello script");
 // ------------------- global array ------
@@ -52,17 +52,17 @@ function MenImges (name , source ,price){
   
 
 new MenImges("ronaldo", "../img/menImg/img1.jpg",200);
-new MenImges("ronaldo", "../img/menImg/img1.jpg", 200);
-new MenImges("ronaldo", "../img/menImg/img1.jpg", 300);
+new MenImges("messi", "../img/menImg/img1.jpg", 200);
+new MenImges("mbabe", "../img/menImg/img1.jpg", 300);
 
 
   //----------   function for set item -----------
-  function setItems (){
+  // function setItems (){
     
-     let storeData = JSON.stringify(allProduct);
-     localStorage.setItem('photo',storeData);
+  //    let storeData = JSON.stringify(allProduct);
+  //    localStorage.setItem('photo',storeData);
   
-   }
+  //  }
  
 
 
@@ -70,55 +70,144 @@ new MenImges("ronaldo", "../img/menImg/img1.jpg", 300);
 
    let div =[div1,div2,div3]
 
-  function renderImgMen (){
+  // function renderImgMen (){
      
-        LeftElement.src=allProduct[0].source;
-        CenterElement.src=allProduct[1].source;
-        RightElement.src=allProduct[2].source;
+  //       LeftElement.src=allProduct[0].source;
+  //       CenterElement.src=allProduct[1].source;
+  //       RightElement.src=allProduct[2].source;
 
-        // LeftElement2.src=allProduct[3].source;
-        // CenterElement2.src=allProduct[4].source;
-        // RightElement2.src=allProduct[5].source;
+       
 
-        // LeftElement3.src=allProduct[6].source;
-        // CenterElement3.src=allProduct[7].source;
-        // RightElement3.src=allProduct[8].source;
-
-
-        for(let i=0 ;i<allProduct.length;i++){
+        // for(let i=0 ;i<allProduct.length;i++){
             
-            let h4 =document.createElement('h4');
-            div[i].appendChild(h4);
-            h4.textContent=`${allProduct[i].name}`
-            let p =document.createElement('p');
-            div[i].appendChild(p);
-            p.textContent=`${allProduct[i].price}`
-            let buttun =document.createElement('button');
-            div[i].appendChild(buttun);
-            buttun.textContent='add to pok'
-            buttun.onclick= function () {
-                if(typeof(Storage) !== "undefined") {
-                  if (localStorage.clickcount) {
-                    localStorage.clickcount = Number(localStorage.clickcount)+1;
-                    alert('added to pok');
-                  } else {
-                    localStorage.clickcount = 1;
-                  }
-                  document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
-                } else {
-                  document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-                }
-              }
+        //     let h4 =document.createElement('h4');
+        //     div[i].appendChild(h4);
+        //     h4.textContent=`${allProduct[i].name}`
+        //     let p =document.createElement('p');
+        //     div[i].appendChild(p);
+        //     p.textContent=`${allProduct[i].price}`
+        //     let a =document.createElement('a');
+        //     div[i].appendChild(a);
+        //     a.href='#'
+        //     a.textContent='add to cart'
+        //     a.addEventListener('click',()=>{
+        //       cartNumber();
+        //     })
 
+         
+            // a.onclick= function () {
+            //     if(typeof(Storage) !== "undefined") {
+                  
+            //       if (localStorage.clickcount) {
+            //         localStorage.clickcount = JSON.stringify(allProduct[i].name);
+
+            //         alert('added to cart');
+            //       } 
+            //       else {
+            //         localStorage.clickcount = 1;
+            //       }
+            //       document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+            //     } else {
+            //       document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+            //     }
+            //   
+  //         }
+
+    
+  // }
+
+
+  let carts =document.querySelectorAll('.add-cart');
+  for(let i=0 ;i<carts.length;i++){
+    carts[i].addEventListener('click',()=>{
+      cartNumber (allProduct[i]);
+      totalCost (allProduct[i]);
+    })
+  }
+
+  function oldNumberCart (){
+    let prodectNubmer =localStorage.getItem('cartNumbers');
+    if(prodectNubmer){
+      document.getElementById('result').textContent=prodectNubmer;
     }
   }
 
-    renderImgMen();
+
+    function cartNumber (prodects){
+      console.log(prodects)
+let prodectNubmer =localStorage.getItem('cartNumbers');
+prodectNubmer=parseInt(prodectNubmer);
+
+if(prodectNubmer){
+  localStorage.setItem('cartNumbers', prodectNubmer + 1);
+  document.getElementById('result').textContent=prodectNubmer+1;
+}
+else{
+
+  localStorage.setItem('cartNumbers',1);
+  document.getElementById('result').textContent=1;
+}
+setItems(prodects);
+    }
+
+    function setItems(prodects){
+      let cartItem=localStorage.getItem('prodectInCart');
+      cartItem=JSON.parse(cartItem);
+      if(cartItem!==null){
+
+        if(cartItem[prodects.name]==undefined){
+          cartItem={
+          ...cartItem,
+          [prodects.name]:prodects
+          }
+        }
+        cartItem[prodects.name].vote+=1;
+
+      }else{
+        prodects.vote=1;
+        cartItem ={
+         [prodects.name]:prodects
+      }
+
+     
+      }
+      localStorage.setItem('prodectInCart', JSON.stringify(cartItem))
+    }
+
+
+    function totalCost (prodects){
+      let cartCost = localStorage.getItem('totalCost');
+      if(cartCost!==null){
+        cartCost=parseInt(cartCost);
+        localStorage.setItem('totalCost',cartCost +prodects.price);
+      }
+    else {
+      localStorage.setItem('totalCost',prodects.price);
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // renderImgMen();
     console.log(allProduct)
 
-    LeftElement.addEventListener('click',clicker)
-    CenterElement.addEventListener('click',clicker)
-    RightElement.addEventListener('click',clicker)
+    // LeftElement.addEventListener('click',clicker)
+    // CenterElement.addEventListener('click',clicker)
+    // RightElement.addEventListener('click',clicker)
     // LeftElement2.addEventListener('click',clicker)
     // CenterElement2.addEventListener('click',clicker)
     // RightElement2.addEventListener('click',clicker)
@@ -127,26 +216,26 @@ new MenImges("ronaldo", "../img/menImg/img1.jpg", 300);
     // RightElement3.addEventListener('click',clicker)
    
     
-    function clicker (event){
-        if(event.target.id==="left-image"){
-            // location.href = "../pages/prodect.html";
-            allProduct[0].vote++;
-        }
-        else if(event.target.id==="Center-image"){
-            // location.href = "../pages/prodect.html";
-            allProduct[1].vote++;
-        }
-        else if(event.target.id==="Right-image"){
-            // location.href = "../pages/prodect.html";
-            allProduct[2].vote++;
+    // function clicker (event){
+    //     if(event.target.id==="left-image"){
+    //         // location.href = "../pages/prodect.html";
+    //         allProduct[0].vote++;
+    //     }
+    //     else if(event.target.id==="Center-image"){
+    //         // location.href = "../pages/prodect.html";
+    //         allProduct[1].vote++;
+    //     }
+    //     else if(event.target.id==="Right-image"){
+    //         // location.href = "../pages/prodect.html";
+    //         allProduct[2].vote++;
             
-        }
+    //     }
 
-        setItems ()
-    }
-
-
+    //     // setItems ()
+    // }
 
 
+
+    oldNumberCart ();
 
 

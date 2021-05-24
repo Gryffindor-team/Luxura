@@ -1,65 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   
+
     <title>women dress</title>
-    <link rel="stylesheet" href="/css/women-dress.css">
-    <link rel="stylesheet" href="/css/mainPage.css">
-    <link rel="stylesheet" href="/css/reset.css">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/women-dress.css">
 
 </head>
+
 <body>
     <header>
-        <a href="index.html">
+        <a href="../index.html">
             <img src="../img/main-page/main logo.png" alt="" class="mainLogo">
         </a>
         <nav>
             <ul>
                 <li>
                     <a href="">How To Order</a>
-                    <a href="pages/men-suit.html">Men Suits</a>
-                    <a href="#">Women Dresses</a>
+                    <a href="../pages/men-suit.html">Men Suits</a>
+                    <a href="">Women Dresses</a>
                     <a href="">Shoes And Accessories</a>
-                    <a href="pages/cart.html">
-                        <img src="../img/main-page/cart-logo.png" alt="" id="cartLogo">
+                    
+                   <li class="cart"> 
+                       <a href="../pages/cart.html">
+                        <img src="../img/main-page/cart-logo2.png" alt="" class="cartLogo"> 
+                        <ion-icon name="basket"></ion-icon> cart <span>0</span>
                     </li>
-                </ul>
+                </li>
+            </ul>
             </a>
         </nav>
     </header>
-<main>
+    <main>
 
-<div class="container">
-    <h2>Filter</h2>
-    <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-        <button class="btn" onclick="filterSelection('color')"> color</button>
-        <button class="btn" onclick="filterSelection('veil')"> with bride veil</button>
+        <div class="container">
+            <h2>Filter</h2>
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('color')"> color</button>
+                <button class="btn" onclick="filterSelection('veil')"> with bride veil</button>
 
-</div>
+            </div>
 
+ <div id="divv1" class="image">
 
- <div id="div1" class="image">
+            <div id="div1" class="image">
 
- <img id="firstImg" src="" alt="" >
- <button class="add-cart cart1">add cart </button>
-</div>
-
-<div id="div2" class="image">
+<div id="divv2" class="image">
 <img id="secondImg" src="" alt="" >
 <button class="add-cart cart2">add cart </button>
 </div>
 
-<div id="div3" class="image">
+<div id="divv3" class="image">
 <img id="thirdImg" src="" alt="" >
 <button class="add-cart cart3">add cart </button>
 </div>
 
-<div id="div4" class="image">
+<div id="divv4" class="image">
     <img id="fourthImg" src="" alt="" >
     <button class="add-cart cart4">add cart </button>
     </div>
 
+            <div id="div4" class="image">
+                <img id="fourthImg" src="" alt="">
+                <button class="add-cart cart4">add cart </button>
+            </div>
 
 
 
@@ -68,32 +75,34 @@
 
 
 
-</div>
-</main>
-<script src="/js/women-dress.js"></script>
 
-<footer>
-    <section id="socialMedia">
-        <h4>Follow Us On Social Media Accounts </h4>
-        <div id="socialMediaList">
-            <img src="../img/main-page/facebook.png" alt="" class="socialMediaListImg">
-            <img src="../img/main-page/instagram.png" alt="" class="socialMediaListImg">
-            <img src="../img/main-page/Pinterest.png" alt="" class="socialMediaListImg">
-            <img src="../img/main-page/youtube.png" alt="" class="socialMediaListImg">
         </div>
+    </main>
+    <script src="/js/women-dress.js"></script>
 
-        <section id="ending">
-            <a href="">About Us</a>
-            <a href="">Contact Us</a>
-            <img src="" alt="">
-            <p>&copy; All Rights Reserved To Luxura 2021</p>
-            <p>Done By Gryffindor-Team </p>
+    <footer>
+        <section id="socialMedia">
+            <h4>Follow Us On Social Media Accounts </h4>
+            <div id="socialMediaList">
+                <img src="../img/main-page/facebook.png" alt="" class="socialMediaListImg">
+                <img src="../img/main-page/instagram.png" alt="" class="socialMediaListImg">
+                <img src="../img/main-page/Pinterest.png" alt="" class="socialMediaListImg">
+                <img src="../img/main-page/youtube.png" alt="" class="socialMediaListImg">
+            </div>
 
+            <section id="ending">
+                <a href="">About Us</a>
+                <a href="">Contact Us</a>
+                <img src="" alt="">
+                <p>&copy; All Rights Reserved To Luxura 2021</p>
+                <p>Done By Gryffindor-Team </p>
+
+            </section>
         </section>
-    </section>
 
-    <div id="devprive"></div>
+        <div id="devprive"></div>
 
-</footer>
+    </footer>
 </body>
+
 </html>
