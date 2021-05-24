@@ -9,59 +9,58 @@ let divv4 = document.getElementById("divv4");
 
 
 
-let firstImg= document.getElementById('firstImg');
-let secondImg= document.getElementById('secondImg');
-let thirdImg= document.getElementById('thirdImg');
-let fourthImg= document.getElementById('fourthImg');
+let firstImg = document.getElementById('firstImg');
+let secondImg = document.getElementById('secondImg');
+let thirdImg = document.getElementById('thirdImg');
+let fourthImg = document.getElementById('fourthImg');
 
 
 
-let dressNames=['dress1', 'dress2','dress3', 'dress4'];
-let dressPrice=[100,200 ,300 ,400];
+let dressNames=['dress1','dress2','dress3','dress4'];
+let dressPrice=[100,200,300,400];
 
 
-function addDress(name,source,price){
+function addDress(name,price){
     this.name=name;
-    this.source=source;
     this.price=price;
+    this.source=`../img/women-dress-imgs/${name}.jpg`;
     this.inCart=0;
 
     addDress.allDress.push(this);
-    
 }
 
 addDress.allDress=[];
-console.log(addDress.allDress);
 
 // ------------- add dress photos object---------------------------
-for (let i = 0; i < dressNames.length; i++) {
-    
-    new addDress(dressNames[i], `../img/wireframe/women-dress-imgs/${dressNames[i]}.jpg`,dressPrice[i]);
-}
+    for (let i = 0; i < dressNames.length; i++) {
+        
+        new addDress(dressNames[i],dressPrice[i]);
+    }
+
 //--------------------------------------
 
 
 let divv =[divv1,divv2,divv3,divv4];
 
-function renderImgs(){
-    firstImg.src = addDress.allDress[0].source;
-    secondImg.src = addDress.allDress[1].source;
-    thirdImg.src = addDress.allDress[2].source;
-    fourthImg.src= addDress.allDress[3].source;
+//function renderImgs(){
+    //firstImg.src = addDress.allDress[0].source;
+    //secondImg.src = addDress.allDress[1].source;
+   // thirdImg.src = addDress.allDress[2].source;
+   // fourthImg.src= addDress.allDress[3].source;
 
-    for (let i = 0; i < dressNames.length; i++) {
+  // for (let i = 0; i < dressNames.length; i++) {
     
-    let h4 =document.createElement('h4');
-    divv[i].appendChild(h4);
-    h4.textContent=`${addDress.allDress[i].name}`;
-    let p =document.createElement('p');
-    divv[i].appendChild(p);
-    p.textContent=`${addDress.allDress[i].price}`;
-    }
-}
+   // let h4 =document.createElement('h4');
+   // divv[i].appendChild(h4);
+    //h4.textContent=`${addDress.allDress[i].name}`;
+    //let p =document.createElement('p');
+  //  divv[i].appendChild(p);
+   // p.textContent=`${addDress.allDress[i].price}`;
+  //  }
+//}
 
 
-renderImgs();
+//renderImgs();
 
 
 console.log(addDress.allDress);
@@ -82,7 +81,7 @@ function onLoadCartNumbers(){
     let productNumbers= localStorage.getItem('cartNumber');
 
     if(productNumbers){
-        document.querySelector('.cart span').textContent=productNumbers;
+      //  document.querySelector('.cart span').textContent=productNumbers;
     }
 
 }
@@ -95,11 +94,11 @@ function cartNumbers(allDress){
     
     if(productNumbers){
         localStorage.setItem('cartNumber', productNumbers +1);
-        document.querySelector('.cart span').textContent= productNumbers + 1;
+        //document.querySelector('.cart span').textContent= productNumbers + 1;
 
     }else{
         localStorage.setItem('cartNumber' ,1);
-        document.querySelector('.cart span').textContent=1;
+       // document.querySelector('.cart span').textContent=1;
     }
 
     setItem(allDress);
@@ -139,9 +138,6 @@ function totalCost(product){
 //console.log("the product price is", product.price);
 let cartCost = localStorage.getItem('totalCost');
 
-console.log('my cartcost is', cartCost);
-console.log(typeof cartCost);
-
 if (cartCost != null){
 cartCost=parseInt(cartCost);
 localStorage.setItem('totalCost', cartCost + product.price);
@@ -155,34 +151,55 @@ localStorage.setItem('totalCost', cartCost + product.price);
 
 }
 
-
+onLoadCartNumbers();
 
 
 // ------ adding to cart html page  ---------------
 
 function displayCart(){
-    let cartItems = localStorage.getItem('productsInCart');
-    cartItems = JSON.parse(cartItems);
-let productContainer = document.querySelectorAll(".products-container");
+    let cartItems = localStorage.getItem('productsincart')
+    cartItems = JSON.parse(cartItems)
+    console.log(cartItems);
 
-    if(cartItems && productContainer){
-        productContainer.innerHTML= '';
-Object.values(cartItems).map(item => {
-    productContainer.innerHTML += `
-     <div class="product"> 
-     <ion-icon name="close-circle"></ion-icon>
-     <img src="../img/wireframe/women-dress-imgs/${item.name}.jpg">
-     <span>${item.name}</span>
-     </div>
-     <dive class="price"> ${item.price}</div>
-     
-     `
-});
-    }
+    let prodectContaner = document.querySelector('.products')
+    let cartCost = localStorage.getItem('cost')
+    if (cartItems && prodectContaner) {
+        prodectContaner.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            prodectContaner.innerHTML += `
+        <div class="product">
+        <ion-icon name="close-circle"></ion-icon>
+        <img src="../img/women-dress-imgs/${item.name}.jpg">
+                        <span>${item.name}</span> 
+
+                    </div>
+
+
+                    <div class="price sm-hide">${item.price}</div>
+                    <div class="quantity">
+                        <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
+                            <span>${item.incart}</span>
+                        <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
+                        <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                    <div class="total">${item.incart * item.price}</div>`
+
+
+
+                    
+        
+        }
+        )
+        prodectContaner.innerHTML += `
+            <div class="basketTotalContainer">
+                <h4 class="basketTotalTitle"> Total</h4>
+                <h4 class="basketTotal">$${cartCost},00</h4>
+            </div>`
+
     
-    console.log(productContainer.innerHTML);
+
+}
 }
 
-onLoadCartNumbers();
 displayCart();
 
