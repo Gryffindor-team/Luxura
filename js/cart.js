@@ -27,11 +27,11 @@ function render() {
                     // <div class="price sm-hide">${item.price}</div>
                     // <div class="quantity">
                     //     <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
-                    //         <span>${item.vote}</span>
+                    //         <span>${item.Vote}</span>
                     //     <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
                     //     <ion-icon name="add-outline"></ion-icon>
                     // </div>
-                    // <div class="total">${item.vote * item.price}</div>`
+                    // <div class="total">${item.Vote * item.price}</div>`
 
 
 
@@ -75,8 +75,8 @@ function manageQuantity() {
             currentProduct = decreaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
             // console.log(currentProduct);
 
-            if( cartItems[currentProduct].vote > 1 ) {
-                cartItems[currentProduct].vote -= 1;
+            if( cartItems[currentProduct].Vote > 1 ) {
+                cartItems[currentProduct].Vote -= 1;
                 cartNumber(cartItems[currentProduct], "decrease");
                 totalCost(cartItems[currentProduct], "decrease");
                 localStorage.setItem('prodectInCart', JSON.stringify(cartItems));
@@ -91,7 +91,7 @@ function manageQuantity() {
             currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
             // console.log(currentProduct);
 
-            cartItems[currentProduct].vote += 1;
+            cartItems[currentProduct].Vote += 1;
             cartNumber(cartItems[currentProduct]);
             totalCost(cartItems[currentProduct]);
             localStorage.setItem('prodectInCart', JSON.stringify(cartItems));
@@ -120,8 +120,8 @@ function deleteButtons() {
         deleteButtons[i].addEventListener('click', () => {
             productName = deleteButtons[i].parentElement.textContent.toLocaleLowerCase().replace(/ /g,'').trim();
            
-            localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].vote);
-            localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price * cartItems[productName].vote));
+            localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].Vote);
+            localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price * cartItems[productName].Vote));
 
             delete cartItems[productName];
             localStorage.setItem('prodectInCart', JSON.stringify(cartItems));
@@ -132,5 +132,3 @@ function deleteButtons() {
         })
     }
 }
-
-
