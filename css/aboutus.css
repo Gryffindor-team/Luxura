@@ -121,9 +121,9 @@ margin: 1,5rem 0;
     margin: 1.5rem 0;
     font-weight: bold;
     text-align: center;
-    color: black;
+    color: #333;
     
-    background-color:#333;
+    background-color:gray;
 }
 /*button_contact*/
 .card .btn
@@ -139,6 +139,19 @@ margin: 1,5rem 0;
     text-decoration: none;
     color: #fff;
 
+}
+.card #btn
+{
+    padding: 1rem 2.5rem;
+    background: #445ae3;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    margin: 1rem 0; 
+    transition: all .5s;
+    text-decoration: none;
+    color: #fff;
 }
 /*event of botton_contact*/
 .card .btn:hover
