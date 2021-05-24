@@ -7,24 +7,21 @@
 }
 html
 {
-font-size: 1em;
-font-family: Arial, Helvetica, sans-serif;
+   font-size: 1em;
+   font-family: Arial, Helvetica, sans-serif;
 
 }
 
-a{
-    text-decoration: none;
-    color: #fff;
-}
 
+/* spacing to hight*/
 section
 {
-    /* spacing to hight*/
     padding: 10rem 0;
-    background:#333;
+    background:rgb(100, 98, 98);
 
 
 }
+/*header main h1*/
 .heading
 {
     text-transform: uppercase;
@@ -38,87 +35,97 @@ section
     
     
 }
+/*proparity about the line*/
 .heading::after
 {
    
     content: '';
-    width: 20rem;
-    height: 0.8rem;
+    width: 20rem;/*عرض الخط*/
+    height:10px;/*ارتفاع الخط*/
     background: #6D214f;
-    position: absolute;
-    bottom: -2rem;
+    position:absolute;/*حتى يظهر الخط*/
+    bottom: -2rem;/*المسافه بين الكلمة والخط*/
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%);/* موقع الخط*/
     border-radius: 2rem;
 
 }
- 
+ /*prpparty of position and display the card in the area*/
 .card_wrapper
 {   
     display: flex;
     align-items: center;
-    align-content: center;
-    flex-direction: column;
+    align-content:center;
+    flex-direction:column;
 
 
 }
+/*proparity of card main*/
 .card
 {
-    
-width :40rem;
-background: #ebeef8;
-display: flex;
-flex-direction: column;
-align-items:center;
-justify-content: center;
-margin:1rem 0;
-box-shadow: .5rem .5rem .3rem rgb(0, 0,0,0.2);
+    height: 850px;
+    width :40rem;
+    background: gray;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin:1rem 0;
+    box-shadow: .5rem .5rem .3rem rgb(0, 0,0,0.2);
+    border-radius: 2rem;
 
 
 }
-.card .card_img
+/*proparity of background_img*/
+ .card_img
 {
     width: 100%;
     height: 15rem;
     object-fit: cover;
     clip-path: polygon(0 0,100% 0%, 100% 69%, 0% 100%); 
 }
+/* information about the profile_img*/
 .profile_img
 {
-    width: 15rem;
-    height: 15rem;
+    width: 19rem;
+    height: 19rem;
     object-fit: cover;
     border-radius: 50%;
     margin-top: -9rem;
     border: 1rem solid #ebeef8;
     z-index: 1;
 }
+/* Tiltle name (الترويسة)*/
 .card h1
 {
 font-size: 2.5rem;
 color: #333;
 margin: 1,5rem 0;
 }
+/*like a student*/
 .job_title
 {
-    color: #777;
+    color:#333;
     font-size: 2rem;
     font-weight: 700;
 }
-
+/*paragraph detalis(p)*/
 .about
 {
+    
     height: 319px;
     overflow: auto;  
     line-height: 22px; 
     font-size: 1.5rem;
     padding: 1rem;
     margin: 1.5rem 0;
-    
+    font-weight: bold;
     text-align: center;
-    color: #333;
-    font-weight: 500;
+    color: black;
+    
+    background-color:#333;
 }
+/*button_contact*/
 .card .btn
 {
     padding: 1rem 2.5rem;
@@ -129,8 +136,11 @@ margin: 1,5rem 0;
     border-radius: 2rem;
     margin: 1rem 0; 
     transition: all .5s;
+    text-decoration: none;
+    color: #fff;
 
 }
+/*event of botton_contact*/
 .card .btn:hover
 {
     color: #333;
@@ -143,7 +153,7 @@ margin: 1,5rem 0;
 {
     color: #eee;
     transform: translateY(0px);
-    box-shadow: none;
+    box-shadow:non;
     background: #111;
 
 }
@@ -178,9 +188,9 @@ color: #666;
     transform: translateY(-0.5rem);
     text-shadow: .5rem .5rem .5rem #6d214f;
 }
-.fa-twitter:hover
+.fa-github:hover
 {
-    color: #55acee;
+    color: black;
     transform: translateY(-0.5rem);
     text-shadow: .5rem .5rem .5rem #55e6c1;
 }
