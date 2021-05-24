@@ -19,8 +19,9 @@ a{
 
 section
 {
+    /* spacing to hight*/
     padding: 10rem 0;
-    background: #fff;
+    background:#333;
 
 
 }
@@ -32,12 +33,14 @@ section
     margin-right: -3px;
     margin-bottom: 5rem;
     text-align: center;
-    color:#333;
+    color:#6d214f;
     position: relative;
+    
     
 }
 .heading::after
 {
+   
     content: '';
     width: 20rem;
     height: 0.8rem;
@@ -51,7 +54,7 @@ section
 }
  
 .card_wrapper
-{
+{   
     display: flex;
     align-items: center;
     align-content: center;
@@ -61,13 +64,14 @@ section
 }
 .card
 {
-width :25rem;
+    
+width :40rem;
 background: #ebeef8;
 display: flex;
 flex-direction: column;
 align-items:center;
 justify-content: center;
-margin:2rem 0;
+margin:1rem 0;
 box-shadow: .5rem .5rem .3rem rgb(0, 0,0,0.2);
 
 
@@ -75,7 +79,7 @@ box-shadow: .5rem .5rem .3rem rgb(0, 0,0,0.2);
 .card .card_img
 {
     width: 100%;
-    height: 26rem;
+    height: 15rem;
     object-fit: cover;
     clip-path: polygon(0 0,100% 0%, 100% 69%, 0% 100%); 
 }
@@ -104,9 +108,13 @@ margin: 1,5rem 0;
 
 .about
 {
+    height: 319px;
+    overflow: auto;  
+    line-height: 22px; 
     font-size: 1.5rem;
     padding: 1rem;
     margin: 1.5rem 0;
+    
     text-align: center;
     color: #333;
     font-weight: 500;
