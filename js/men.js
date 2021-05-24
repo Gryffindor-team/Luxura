@@ -33,23 +33,15 @@ function MenImges (name , source ,price){
     this.name=name;
     this.source=source;
     this.price=price;
-    this.vote=0;
+    this.Vote=0;
 
     allProduct.push(this);
 }
   
 
-new MenImges("black suit", "../img/menImg/black.jpg",200);
-new MenImges("Black-TUXEDO suit", "../img/menImg/black-t.jpg",400);
-new MenImges("blue suit", "../img/menImg/blue.jpg",250);
-new MenImges("Blue-TUXEDO suit", "../img/menImg/blue-t.jpg",400);
-new MenImges("gray suit", "../img/menImg/gray.jpg" ,200);
-new MenImges("gray-TUXEDO suit", "../img/menImg/gray2.jpg" ,400);
-new MenImges("red-TUXEDO suit", "../img/menImg/red-t.jpg",400);
-new MenImges("red suit", "../img/menImg/red.jpg",200);
-new MenImges("ronaldo", "../img/menImg/ronaldo.jpg",500);
-
-
+new MenImges("ronaldo", "../img/menImg/img1.jpg",200);
+new MenImges("messi", "../img/menImg/img1.jpg", 200);
+new MenImges("mbabe", "../img/menImg/img1.jpg", 300);
 
 
   
@@ -109,10 +101,10 @@ setItems(prodects);
           [prodects.name]:prodects
           }
         }
-        cartItem[prodects.name].vote+=1;
+        cartItem[prodects.name].Vote+=1;
 
       }else{
-        prodects.vote=1;
+        prodects.Vote=1;
         cartItem ={
          [prodects.name]:prodects
       }
