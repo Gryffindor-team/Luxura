@@ -1,0 +1,39 @@
+<<<<<<< HEAD
+*{
+
+    box-sizing: border-box;
+
+}
+
+
+.container{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.image {
+margin: 20px;
+
+}
+
+img{
+    height: 250px;
+    width: 200px;
+}    
+#firstImg{
+margin: 10px;
+
+}
+
+
+
+
+
+
+
+=======
+>>>>>>> e8c4438be517e9034aa029930a7836976e0e2720

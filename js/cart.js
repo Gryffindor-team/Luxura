@@ -1,34 +1,136 @@
-'use strict'
+"use strict"
 
-if (localStorage.photo) {
 
-    let photoFromLS = JSON.parse(localStorage.photo);
+///------------- function to display the items 
+
+function render() {
+    let cartItems = localStorage.getItem('prodectInCart')
+    cartItems = JSON.parse(cartItems)
+    console.log(cartItems);
     
-    for (let i = 0; i < photoFromLS.length; i++) {
-        new MenImges(photoFromLS[i].name); //re-instantiation
-       
 
-        allProduct[i].renderImgMen();
+    let prodectContaner = document.querySelector('.products-container')
+    let cartCost = localStorage.getItem('totalCost')
+    if (cartItems && prodectContaner) {
+        prodectContaner.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            prodectContaner.innerHTML += `
+        <div class="product">
+        <ion-icon class="delete" name="close-circle"></ion-icon>
+
+        <img src="../img/menImg/img1.jpg" id='pro' width="100px' height="100px">
+                        <span>${item.name}</span> 
+
+                    </div>
+
+
+                    // <div class="price sm-hide">${item.price}</div>
+                    // <div class="quantity">
+                    //     <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
+                    //         <span>${item.vote}</span>
+                    //     <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
+                    //     <ion-icon name="add-outline"></ion-icon>
+                    // </div>
+                    // <div class="total">${item.vote * item.price}</div>`
+
+
+
+                    
+        
+        }
+        )
+        prodectContaner.innerHTML += `
+            <div class="basketTotalContainer">
+                <h4 class="basketTotalTitle"> Total</h4>
+                <h4 class="basketTotal">$${cartCost},00</h4>
+            </div>`
+
+            deleteButtons();
+            manageQuantity();
+
+}
+}
+render();
+//---------------  function to quantity increse and decrese -----
+//------------- and inside it add event listener to i tag 
+
+
+
+function manageQuantity() {
+    let decreaseButtons = document.querySelectorAll('.decrease');
+    let increaseButtons = document.querySelectorAll('.increase');
+    let currentQuantity = 0;
+    let currentProduct = '';
+    let cartItems = localStorage.getItem('prodectInCart');
+    cartItems = JSON.parse(cartItems);
+
+     // // we added from web to solve our problem --------------- 
+
+     
+    for(let i=0; i < increaseButtons.length; i++) {
+        decreaseButtons[i].addEventListener('click', () => {
+            console.log(cartItems);
+            currentQuantity = decreaseButtons[i].parentElement.querySelector('span').textContent;
+            console.log(currentQuantity);
+            currentProduct = decreaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+            // console.log(currentProduct);
+
+            if( cartItems[currentProduct].vote > 1 ) {
+                cartItems[currentProduct].vote -= 1;
+                cartNumber(cartItems[currentProduct], "decrease");
+                totalCost(cartItems[currentProduct], "decrease");
+                localStorage.setItem('prodectInCart', JSON.stringify(cartItems));
+                render();
+            }
+        });
+
+        increaseButtons[i].addEventListener('click', () => {
+            // console.log(cartItems);
+            currentQuantity = increaseButtons[i].parentElement.querySelector('span').textContent;
+            console.log(currentQuantity);
+            currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+            // console.log(currentProduct);
+
+            cartItems[currentProduct].vote += 1;
+            cartNumber(cartItems[currentProduct]);
+            totalCost(cartItems[currentProduct]);
+            localStorage.setItem('prodectInCart', JSON.stringify(cartItems));
+            render();
+        });
     }
 }
 
-// if (localStorage.clickcount) {
-
-//     let clickers = JSON.parse(localStorage.clickcount);
-    
-//     for (let i = 0; i < clickers.length; i++) {
-//         new MenImges(clickers[i].name); //re-instantiation
-       
-
-//         allProduct[i].renderImgMen();
-//     }
-// }
 
 
 
-let divForCart =document.getElementById('forCart');
-for(let i=0;i<allProduct.length;i++){
-    let p =document.createElement('p');
-    divForCart.appendChild(p);
-    p.innerText=allProduct[i].name
+//------------------  to delete the div  and to add event listener to i tag
+
+function deleteButtons() {
+    let deleteButtons = document.querySelectorAll('.product ion-icon');
+    let productNumbers = localStorage.getItem('cartNumbers');
+    let cartCost = localStorage.getItem("totalCost");
+    let cartItems = localStorage.getItem('prodectInCart');
+    cartItems = JSON.parse(cartItems);
+    let productName;
+    // console.log(cartItems);
+
+
+    // // we added from web to solve our problem ---------------
+    for(let i=0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener('click', () => {
+            productName = deleteButtons[i].parentElement.textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+           
+            localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].vote);
+            localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price * cartItems[productName].vote));
+
+            delete cartItems[productName];
+            localStorage.setItem('prodectInCart', JSON.stringify(cartItems));
+
+            render();
+            oldNumberCart ();
+            // location.reload();
+        })
+    }
 }
+
+

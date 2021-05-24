@@ -10,9 +10,12 @@ header {
 }
 
 nav {
-    float: right;
-    margin-right: 338px;
-    margin-top: 30px;
+    margin-top: -47px;
+    margin-left: 186px;
+}
+
+nav ul li {
+    display: inline;
 }
 
 nav ul li a {
@@ -27,14 +30,17 @@ nav ul li a {
 .cartLogo {
     width: 50px;
     background-color: blanchedalmond;
-
     left: 941px;
     position: relative;
     top: -38px;
     background-color: #0b172a;
 }
 
-
-
-
-
+#cartLogoNum {
+    width: 50px;
+    background-color: blanchedalmond;
+    left: 941px;
+    position: relative;
+    top: -38px;
+    background-color: #0b172a;
+}
