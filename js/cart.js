@@ -26,8 +26,6 @@ function render() {
                         <span>${item.name}</span> 
 
                     </div>
-
-
                     // <div class="price sm-hide">${item.price}</div>
                     // <div class="quantity">
                     //     <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
@@ -36,11 +34,6 @@ function render() {
                     //     <ion-icon name="add-outline"></ion-icon>
                     // </div>
                     // <div class="total">${item.Vote * item.price}</div>`
-
-
-
-                    
-        
         }
         )
         prodectContaner.innerHTML += `
@@ -81,7 +74,7 @@ function manageQuantity() {
             // console.log(currentProduct);
 
             if( cartItems[currentProduct].Vote > 1 ) {
-                cartItems[currentProduct].Vote = cartItems[currentProduct].Vote - 1;
+                cartItems[currentProduct].Vote -= 1;
                 cartNumber(cartItems[currentProduct], "decrease");
                 totalCost(cartItems[currentProduct], "decrease");
                 localStorage.setItem('prodectInCart', JSON.stringify(cartItems));
@@ -92,7 +85,7 @@ function manageQuantity() {
         increaseButtons[i].addEventListener('click', () => {
             // console.log(cartItems);
             currentQuantity = increaseButtons[i].parentElement.querySelector('span').textContent;
-            console.log(currentQuantity);
+            // console.log(currentQuantity);
             currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
             // console.log(currentProduct);
 
@@ -142,14 +135,14 @@ function deleteButtons() {
 let confirm =document.getElementById('for-confirm');
 let butConfirm =document.createElement('button');
 confirm.appendChild(butConfirm);
-butConfirm.textContent='confirm order'
+butConfirm.textContent='confirm order';
 
 butConfirm.addEventListener('click',() =>{
     alert(`your order will  Booked after submit the form thank you\n and we wiil wait you `);
     localStorage.clear();
 
     
-  let form =  document.getElementById('form').style.visibility='visible'
+  let form =  document.getElementById('form').style.visibility='visible';
 
   
 let submit =document.getElementById('submit');
