@@ -18,7 +18,7 @@
             <ul>
                 <li> <a href="../#HowToOrder">How To Order</a></li>
                 <li> <a href="../pages/men-suit.html">Men Suits</a></li>
-                <li> <a href="../pages/women-dress.html">Women Dresses</a></li>
+                <li> <a href="../http://127.0.0.1:5500/pages/men-suit.html#womendresspage">Women Dresses</a></li>
                 <li> <a href="../pages/accessories.html">Shoes And Accessories</a></li>
             </ul>
             <a href="../pages/cart.html">
@@ -28,7 +28,7 @@
     </header>
 
     <main>
-        <h2>Cart Page</h2>
+        <h2 id="carth2">Cart Page</h2>
         <div class="products-container">
             <div class="product-header">
                 <h5 class="product-title">Product</h5>
@@ -47,10 +47,10 @@
 
 
         </div>
-        <form id="form" action="">
+        <form id="form">
             <fieldset>
-                <legend>booking form
-                    <br>
+                <legend>booking form </legend>
+
                 <label for="name">user name</label>
                 <input type="text" id="name" required>
                 <br>
@@ -58,13 +58,23 @@
                 <input type="number" id="number" required>
                 <br>
                 <input type="submit" id="submit">
-            </legend>
+
             </fieldset>
         </form>
     </main>
+
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="../js/men.js"></script>
+    <script src="../js/accessories.js"></script>
+    <script src="../js/cart.js"></script>
+
+
+
+    <!-- //////  footer //////// -->
     <footer>
         <section id="socialMedia">
-    
+
             <div class="foot">
                 <h3 class="footh3">Our Location</h3>
                 <div class="mapouter">
@@ -89,22 +99,22 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="foot">
                 <h4 class="footh4"><a href="../pages/aboutus.html" id="aboutUs">About Us</a></h4>
-                <img src="../img/main-page/teamimg.jpg" alt="" style="height: 200px; margin-top: 15px;">
+                <a href="../https://github.com/Gryffindor-team" target="_blank"><img src="../img/main-page/teamimg.jpg" alt="" style="height: 200px; margin-top: 15px;"></a>
                 <p class="copyRight">&copy; All Rights Reserved To Luxura 2021</p>
-    
+
                 <p class="copyRight">Done By Gryffindor-Team </p>
             </div>
-    
+
             <div class="foot">
                 <h4 class="footh4">Follow Us On Social Media Accounts </h4>
                 <br>
                 <br>
-                <a href="https://www.instagram.com/"><img src="../img/main-page/instagram.png" alt="" class="socialMediaListImg"></a>
-                <a href="https://www.pinterest.com/"> <img src="../img/main-page/Pinterest.png" alt="" class="socialMediaListImg"></a>
-                <a href="https://web.facebook.com/"> <img src="../img/main-page/youtube.png" alt="" class="socialMediaListImg"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="../img/main-page/iconfinder_instagram_2142569.png" alt="" class="socialMediaListImg"></a>
+                <a href="https://web.facebook.com/" target="_blank"> <img src="../img/main-page/iconfinder_circle-facebook__317752.png" alt="" class="socialMediaListImg"></a>
+                <a href="https://www.youtube.com/watch?v=fkHY3FXa2mc" target="_blank"> <img src="../img/main-page/iconfinder_youtube3_834710.png" alt="" class="socialMediaListImg"></a>
             </div>
         </section>
     </footer>
@@ -114,7 +124,5 @@
     <script src="../js/men.js"></script>
     <script src="../js/cart.js"></script>
 </body>
-
-
 
 </html>
