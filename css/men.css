@@ -17,49 +17,55 @@
 }
 
 .women-dress{
-    background-image: url("../img/menImg/dress2.jpg");
+    background-image: url("../img/menImg/dress13.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    
     background-size: cover;
     width: 100%;
     height: 500px;
+
 }
 
 .continer_img {
-    width: 960px;
+ 
     
     display: grid;
-    grid-template-columns: 20% 70%;
+    grid-template-columns: 20% 80%;
+
+    width: 100%;
    
 }
 
 .women{
-    width: 960px;
+ 
     display: grid;
-    grid-template-columns: 20% 70%;
+    grid-template-columns: 20% 80%;
     background-color: white;
     color: black;
     width: 100%;
-    
 }
 
 .img {
+    
     display: grid;
     grid-template-columns: repeat(3, auto);
     column-gap: 10px;
     margin-top: 10px;
+    margin-left: 30px;
     
    
 }
 
 .img-women{
+    
     display: grid;
     grid-template-columns: repeat(3, auto);
     column-gap: 10px;
     margin-top: 10px;
-
     margin-bottom: 20px;
+    margin-left: 30px;
 }
+
 
 /* for the filter */
 
@@ -103,7 +109,8 @@
 
 .black {
     background-color: #010101;
-    padding: 10px;;
+    padding: 10px;
+    ;
 }
 
 .red {
@@ -121,7 +128,7 @@
 
     h4 ,p , #div1 ,#div2 , #div3 ,#div4 ,#div5 ,#div6 ,#divv1 
     #divv2 ,#divv3 , #divv4 ,#divv5 , #divv6 {
-        margin: 5px 0;
+        margin: 5px 20px 5px 0;
     }
 
     .continer_img{
@@ -169,4 +176,42 @@
 
     .color{
         cursor: pointer;
+    }
+
+    .headimg-men {
+        position: relative;
+    }
+
+.headimg-men h2 {
+    color: white;
+    font-size: 70px;
+    font-weight: 900;
+    
+    position: absolute;
+    top: 50%;
+    left: 9.5%;
+    text-transform: capitalize;
+    
+
+}
+.headimg-men h2:hover {
+   
+    border-bottom: 1px solid white;
+}
+.women-dress {
+    position: relative;
+}
+.women-dress h2 {
+    color: black;
+    font-size: 70px;
+    font-weight: 900;
+    
+    position: absolute;
+    top: 45%;
+    left: 9.5%;
+    text-transform: capitalize;}
+
+    .women-dress h2:hover {
+   
+        border-bottom: 1px solid black;
     }
