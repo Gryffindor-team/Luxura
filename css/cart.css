@@ -1,8 +1,19 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+#carth2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    border: 1px solid black;
+}
+
 .container-products {
     max-width: 650px;
     justify-content: space-around;
@@ -59,11 +70,11 @@
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid lightgray;
+    margin-left: 28%;
 }
 
 .product ion-icon {
     cursor: pointer;
-    
 }
 
 .products {
@@ -92,14 +103,16 @@
     width: 10%;
 }
 
-
 #form {
     visibility: hidden;
     border: 1px solid black;
+    margin-left: 60px;
 }
+
 #form input {
     width: 100px;
 }
+
 #form label {
     color: black;
     font-size: large;
