@@ -7,47 +7,54 @@
 // let userName =prompt('please enter your name for Booking the oreder');
 // let userNumber =Number(prompt('please enter your number'));
 
+
+
+
 function render() {
     let cartItems = localStorage.getItem('prodectInCart')
     cartItems = JSON.parse(cartItems)
     console.log(cartItems);
     
 
-    let prodectContaner = document.querySelector('.products-container')
+    let prodectContaner = document.querySelector('.products')
     let cartCost = localStorage.getItem('totalCost')
     if (cartItems && prodectContaner) {
         prodectContaner.innerHTML = '';
         Object.values(cartItems).map(item => {
             prodectContaner.innerHTML += `
-        <div class="product">
+         <div class="product">
         <ion-icon class="delete" name="close-circle"></ion-icon>
 
-        <img src="../img/menImg/${item.name}.jpg" id='pro' width="60px' height="60px">
-                        <span>${item.name}</span> 
-
-                    </div>
-                    // <div class="price sm-hide">${item.price}</div>
-                    // <div class="quantity">
-                    //     <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
-                    //         <span>${item.Vote}</span>
-                    //     <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
-                    //     <ion-icon name="add-outline"></ion-icon>
-                    // </div>
-                    // <div class="total">${item.Vote * item.price}</div>`
+        <img src="../img/menImg/${item.name}.jpg"  width="80px" hieght='40px'>
+        <span>${item.name}</span> 
+        </div>
+                    
+        <div class="price sm-hide">$${item.price},00</div>
+        <div class="quantity">
+        <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
+        <span>${item.Vote}</span>
+        <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
+        <ion-icon name="add-outline"></ion-icon>
+        </div>
+        <div class="total">$${item.Vote * item.price},00</div>
+        
+                    `
         }
         )
         prodectContaner.innerHTML += `
             <div class="basketTotalContainer">
                 <h4 class="basketTotalTitle"> Total</h4>
                 <h4 class="basketTotal">$${cartCost},00</h4>
-                <div id ="for-confirm"></div>
-            </div>`
+                </div>
+                
+                `
 
-            deleteButtons();
-            manageQuantity();
+                manageQuantity();
+                deleteButtons();
 
 }
 }
+// oldNumberCart ();
 render();
 //---------------  function to quantity increse and decrese -----
 //------------- and inside it add event listener to i tag 
@@ -118,14 +125,14 @@ function deleteButtons() {
         deleteButtons[i].addEventListener('click', () => {
             productName = deleteButtons[i].parentElement.textContent.toLocaleLowerCase().replace(/ /g,'').trim();
            
-            localStorage.setItem('cartNumbers', (productNumbers - cartItems[productName].Vote));
-            localStorage.setItem('totalCost', (cartCost - ( cartItems[productName].price * cartItems[productName].Vote)));
+            localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].Vote);
+            localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price * cartItems[productName].Vote));
 
             delete cartItems[productName];
             localStorage.setItem('prodectInCart', JSON.stringify(cartItems));
 
-            render();
             oldNumberCart ();
+            render();
             // location.reload();
         })
     }
@@ -138,10 +145,11 @@ confirm.appendChild(butConfirm);
 butConfirm.textContent='confirm order';
 
 butConfirm.addEventListener('click',() =>{
+   
     alert(`your order will  Booked after submit the form thank you\n and we wiil wait you `);
     localStorage.clear();
 
-    
+   
   let form =  document.getElementById('form').style.visibility='visible';
 
   
@@ -151,7 +159,7 @@ submit.addEventListener('submit',()=>{
     
     // document.getElementById('form').style.visibility='hidden'
     
-    
+    location.reload();
    
 })
 

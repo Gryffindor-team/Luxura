@@ -141,9 +141,9 @@ setItems(prodects);
       if(cartCost!==null){
         cartCost=parseInt(cartCost);
         localStorage.setItem('totalCost',cartCost + prodects.price);
-        // localStorage.setItem('totalCost',cartCost - prodects.price);
         
       }
+
     else {
       localStorage.setItem('totalCost',prodects.price);
     }
