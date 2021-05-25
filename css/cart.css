@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 .container-products {
     max-width: 650px;
     justify-content: space-around;
@@ -88,7 +93,16 @@
 }
 
 
-/* .pro {
-    width: 200px;
-    height: 300px;
-} */
+#form {
+    visibility: hidden;
+    border: 1px solid black;
+}
+#form input {
+    width: 100px;
+}
+#form label {
+    color: black;
+    font-size: large;
+    text-transform: capitalize;
+    margin-right: 15px;
+}
