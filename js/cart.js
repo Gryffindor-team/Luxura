@@ -8,7 +8,7 @@
 // let userNumber =Number(prompt('please enter your number'));
 
 
-
+let cartCost;
 
 function render() {
     let cartItems = localStorage.getItem('prodectInCart')
@@ -17,7 +17,7 @@ function render() {
 
 
     let prodectContaner = document.querySelector('.products')
-    let cartCost = localStorage.getItem('totalCost')
+     cartCost = localStorage.getItem('totalCost')
     if (cartItems && prodectContaner) {
         prodectContaner.innerHTML = '';
         Object.values(cartItems).map(item => {
@@ -31,9 +31,9 @@ function render() {
                     
         <div class="price sm-hide">$${item.price},00</div>
         <div class="quantity">
-        <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
+        <ion-icon class="decrease " name="arrow-dropleft-circle" style="color:#0b172a"></ion-icon>
         <span>${item.Vote}</span>
-        <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
+        <ion-icon class="increase" name="arrow-dropright-circle" style="color:#0b172a"></ion-icon>   
         <ion-icon name="add-outline"></ion-icon>
         </div>
         <div class="total">$${item.Vote * item.price},00</div>
@@ -84,6 +84,7 @@ function manageQuantity() {
                 cartNumber(cartItems[currentProduct], "decrease");
                 totalCost(cartItems[currentProduct], "decrease");
                 localStorage.setItem('prodectInCart', JSON.stringify(cartItems));
+                location.reload();
                 render();
             }
         });
@@ -99,6 +100,7 @@ function manageQuantity() {
             cartNumber(cartItems[currentProduct]);
             totalCost(cartItems[currentProduct]);
             localStorage.setItem('prodectInCart', JSON.stringify(cartItems));
+            location.reload();
             render();
         });
     }
@@ -112,7 +114,7 @@ function manageQuantity() {
 function deleteButtons() {
     let deleteButtons = document.querySelectorAll('.product ion-icon');
     let productNumbers = localStorage.getItem('cartNumbers');
-    let cartCost = localStorage.getItem("totalCost");
+     cartCost = localStorage.getItem("totalCost");
     let cartItems = localStorage.getItem('prodectInCart');
     cartItems = JSON.parse(cartItems);
     let productName;
@@ -132,12 +134,12 @@ function deleteButtons() {
 
             oldNumberCart();
             render();
-            // location.reload();
+            
         })
     }
 }
 
-
+render();
 let confirm = document.getElementById('for-confirm');
 let butConfirm = document.createElement('button');
 butConfirm.classList.add('confirmbutton');
@@ -146,9 +148,8 @@ butConfirm.textContent = 'Confirm Order';
 
 butConfirm.addEventListener('click', () => {
 
-    alert(`Your Order Will Booked After Submitting The Booking Form -- Thank You , And We Are Waitting For You And Your Total Price`);
+    alert(`Your Order Will Booked After Submitting The Booking Form -- Thank You , And We Are Waitting For You And Your Total Price ${cartCost}`);
     localStorage.clear();
-
 
     let form = document.getElementById('form').style.visibility = 'visible';
 
@@ -162,8 +163,11 @@ butConfirm.addEventListener('click', () => {
         // location.reload();
 
     })
+    
 
 })
+
+
 
 
 
