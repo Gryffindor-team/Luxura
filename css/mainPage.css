@@ -160,8 +160,7 @@
     font-size: 45px;
     font-family: 'Oswald', sans-serif;
     margin-top: 60px;
-    border: 2px solid black;
-    padding: 8px;
+    text-decoration: underline;
 }
 
 .footh3 {
@@ -194,6 +193,7 @@
     border: 2px solid #e7e7e7;
     padding: 16px 32px;
     font-size: 16px;
+    font-weight: 600;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -288,6 +288,7 @@
     width: 200px;
     font-size: 19px;
     margin-top: 15px;
+    line-height: 1.2;
     font-family: 'Josefin Sans', sans-serif;
 }
 

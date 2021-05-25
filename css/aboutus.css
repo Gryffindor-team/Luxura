@@ -1,10 +1,16 @@
 /* spacing to hight*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
 #main {
-    padding: 15px;
-    background: white;
+    padding: 16px;
+    background:white;
 }
-
+main
+{
+    font-family:'Oswald',sans-serif;
+}
 
 /*header main h1*/
 
@@ -15,7 +21,7 @@
     margin-right: -3px;
     margin-bottom: 5rem;
     text-align: center;
-    color: #6d214f;
+    color: #0b172a;
     position: relative;
 }
 
@@ -28,7 +34,7 @@
     /*عرض الخط*/
     height: 10px;
     /*ارتفاع الخط*/
-    background: #6D214f;
+    background:#0b172a;
     position: absolute;
     /*حتى يظهر الخط*/
     bottom: -2rem;
@@ -56,8 +62,8 @@
 /*proparity of card main*/
 
 .card {
-    height: 850px;
-    width: 20rem;
+    height: 800px;
+    width: 24rem;
     background: gray;
     display:flex;
     flex-direction: column;
@@ -142,7 +148,6 @@
     text-decoration: none;
     color: #fff;
 }
-
 .card #btn {
     padding: 1rem 2.5rem;
     background: #445ae3;
@@ -155,6 +160,12 @@
     text-decoration: none;
     color: #fff;
 }
+
+/*main{
+    font-family: 'lato',sans-serif;
+}
+*/
+
 
 
 /*event of botton_contact*/
@@ -178,7 +189,7 @@
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-    padding: 2rem 0;
+    padding: 1rem 0;
     margin-top: 1.5rem;
     border-top: 1px solid rgb(0, 0, 0, 0.3);
 }

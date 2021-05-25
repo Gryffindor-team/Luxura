@@ -140,15 +140,7 @@
     .img {
         margin-bottom: 20px;
     }
-    #cartLogoNum{
-        background-color: transparent;
-        color: white;
-        font-size: medium;
-        text-decoration: underline;
-        position: relative;
-        top: 66px;
-        right: 10px;
-    }
+   
 
     .for-suit{
         background-color: #0b172a;
@@ -215,3 +207,4 @@
    
         border-bottom: 1px solid black;
     }
+
