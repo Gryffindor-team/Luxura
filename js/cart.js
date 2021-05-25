@@ -14,7 +14,7 @@ function render() {
     let cartItems = localStorage.getItem('prodectInCart')
     cartItems = JSON.parse(cartItems)
     console.log(cartItems);
-    
+
 
     let prodectContaner = document.querySelector('.products')
     let cartCost = localStorage.getItem('totalCost')
@@ -39,8 +39,7 @@ function render() {
         <div class="total">$${item.Vote * item.price},00</div>
         
                     `
-        }
-        )
+        })
         prodectContaner.innerHTML += `
             <div class="basketTotalContainer">
                 <h4 class="basketTotalTitle"> Total</h4>
@@ -49,10 +48,10 @@ function render() {
                 <div id ="for-confirm"></div>
                 `
 
-                manageQuantity();
-                deleteButtons();
+        manageQuantity();
+        deleteButtons();
 
-}
+    }
 }
 // oldNumberCart ();
 render();
@@ -69,18 +68,18 @@ function manageQuantity() {
     let cartItems = localStorage.getItem('prodectInCart');
     cartItems = JSON.parse(cartItems);
 
-     // // we added from web to solve our problem --------------- 
+    // // we added from web to solve our problem --------------- 
 
-     
-    for(let i=0; i < increaseButtons.length; i++) {
+
+    for (let i = 0; i < increaseButtons.length; i++) {
         decreaseButtons[i].addEventListener('click', () => {
             console.log(cartItems);
             currentQuantity = decreaseButtons[i].parentElement.querySelector('span').textContent;
             console.log(currentQuantity);
-            currentProduct = decreaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+            currentProduct = decreaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g, '').trim();
             // console.log(currentProduct);
 
-            if( cartItems[currentProduct].Vote > 1 ) {
+            if (cartItems[currentProduct].Vote > 1) {
                 cartItems[currentProduct].Vote -= 1;
                 cartNumber(cartItems[currentProduct], "decrease");
                 totalCost(cartItems[currentProduct], "decrease");
@@ -93,7 +92,7 @@ function manageQuantity() {
             // console.log(cartItems);
             currentQuantity = increaseButtons[i].parentElement.querySelector('span').textContent;
             // console.log(currentQuantity);
-            currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+            currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g, '').trim();
             // console.log(currentProduct);
 
             cartItems[currentProduct].Vote += 1;
@@ -121,17 +120,17 @@ function deleteButtons() {
 
 
     // // we added from web to solve our problem ---------------
-    for(let i=0; i < deleteButtons.length; i++) {
+    for (let i = 0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', () => {
-            productName = deleteButtons[i].parentElement.textContent.toLocaleLowerCase().replace(/ /g,'').trim();
-           
+            productName = deleteButtons[i].parentElement.textContent.toLocaleLowerCase().replace(/ /g, '').trim();
+
             localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].Vote);
-            localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price * cartItems[productName].Vote));
+            localStorage.setItem('totalCost', cartCost - (cartItems[productName].price * cartItems[productName].Vote));
 
             delete cartItems[productName];
             localStorage.setItem('prodectInCart', JSON.stringify(cartItems));
 
-            oldNumberCart ();
+            oldNumberCart();
             render();
             // location.reload();
         })
@@ -139,30 +138,29 @@ function deleteButtons() {
 }
 
 
-let confirm =document.getElementById('for-confirm');
-let butConfirm =document.createElement('button');
+let confirm = document.getElementById('for-confirm');
+let butConfirm = document.createElement('button');
+butConfirm.classList.add('confirmbutton');
 confirm.appendChild(butConfirm);
-butConfirm.textContent='confirm order';
+butConfirm.textContent = 'Confirm Order';
 
-butConfirm.addEventListener('click',() =>{
-   
-    alert(`your order will  Booked after submit the form thank you\n and we wiil wait you `);
+butConfirm.addEventListener('click', () => {
+
+    alert(`Your Order Will Booked After Submitting The Booking Form -- Thank You , And We Are Waitting For You And Your Total Price`);
     localStorage.clear();
 
-   
-  let form =  document.getElementById('form').style.visibility='visible';
 
-  
-  let submit1 =document.getElementById('submit');
-  form.appendChild(submit);
-   submit1.addEventListener('submit',()=>{
-    
-    // document.getElementById('form').style.visibility='hidden'
-    alert('your order has been confirm');
-    // location.reload();
-   
+    let form = document.getElementById('form').style.visibility = 'visible';
+
+
+    let submit1 = document.getElementById('submit');
+    form.appendChild(submit);
+    submit1.addEventListener('submit', () => {
+
+        // document.getElementById('form').style.visibility='hidden'
+        alert('your order has been confirm');
+        // location.reload();
+
+    })
+
 })
-
-})
-
-
