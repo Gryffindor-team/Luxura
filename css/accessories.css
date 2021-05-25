@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 header {
     background-color: #0b172a;
     height: 75px;
@@ -49,31 +51,57 @@ nav ul li a {
 /* ------------------------------------------------------   header -------------------------------- */
 /* ------------------------------------------------------   header -------------------------------- */
 main{
-    background-color: #d0d1d4;
     width: 100%;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
-h2 {
+h2{
+    color: #080808;
+    font-family: 'Lato', sans-serif;
+
+    letter-spacing: 5px;
+    text-transform:capitalize;
+    padding: 30px;
+    font-size:larger;
+    font-weight: bolder;
+}
+h2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: mymove 20s infinite;
+  }
+  
+  @keyframes mymove {
+    from {left: 25%;}
+    to {left: 100%}
+  }
+  h4,p {
     color: #080808;
     letter-spacing: 1px;
-    text-transform: capitalize;
-    padding: 30px;
+    text-transform:capitalize;
+    padding-top: 30px;
+    font-family: 'Lato', sans-serif;
+
 }
-.avatar-img {
-    background-image: url("https://thebridalcollection.com/wp-content/uploads/2020/03/Wedding-Planning-in-Your-PJs-1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-    width: 100%;
-    height: 500px;
-    padding-top: 75px;
-    }
+.slide{
+    height: 300px;
+    padding-top: 30px;
+    padding-left: 250px;
+    padding-bottom: 30px;
+}
+.show{
+    background-color: #0b172a;
+
+}
 .images {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    background-color: rgb(182, 161, 161);
+    background-color: #0b172a;
     color: rgb(58, 44, 44);
     width: 950;
-    padding: 20px;
+    padding: 30px;
+
 }
         
 .img {
@@ -83,12 +111,52 @@ h2 {
     margin-top: 10px;
     margin-bottom: 20px;
 }
-#one{
-    animation: fadeIn.5s .5s backwards;
-
-}
-    
-    /* //////////footer/////////////////------------------------------------------------------------------*/
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    padding: 10px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #ffffff;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  br{
+      border: seashell;
+      width: 100%;
+      height: 2px;
+  }
+/* //////////footer/////////////////------------------------------------------------------------------*/
     /* //////////footer/////////////////------------------------------------------------------------------*/
     /* //////////footer/////////////////------------------------------------------------------------------*/
 
