@@ -46,7 +46,7 @@ function render() {
                 <h4 class="basketTotalTitle"> Total</h4>
                 <h4 class="basketTotal">$${cartCost},00</h4>
                 </div>
-                
+                <div id ="for-confirm"></div>
                 `
 
                 manageQuantity();
@@ -153,14 +153,16 @@ butConfirm.addEventListener('click',() =>{
   let form =  document.getElementById('form').style.visibility='visible';
 
   
-let submit =document.getElementById('submit');
-form.appendChild(submit);
-submit.addEventListener('submit',()=>{
+  let submit1 =document.getElementById('submit');
+  form.appendChild(submit);
+   submit1.addEventListener('submit',()=>{
     
     // document.getElementById('form').style.visibility='hidden'
-    
-    location.reload();
+    alert('your order has been confirm');
+    // location.reload();
    
 })
 
 })
+
+
