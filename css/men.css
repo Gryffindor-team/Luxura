@@ -2,6 +2,12 @@
 
 
 /*start  for the main sesion  */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+
 
 * {
     box-sizing: border-box;
@@ -126,10 +132,11 @@
     margin: 10px 0;
     padding: 0 5px;}
 
-    h4 ,p , #div1 ,#div2 , #div3 ,#div4 ,#div5 ,#div6 ,#divv1 
+    h4, p , #div1 ,#div2 , #div3 ,#div4 ,#div5 ,#div6 ,#divv1 
     #divv2 ,#divv3 , #divv4 ,#divv5 , #divv6 {
-        margin: 5px 20px 5px 0;
+        margin: 0px 20px 5px 0;
     }
+    
 
     .continer_img{
         background-color: black;
@@ -152,18 +159,20 @@
     }
     .filter h4 {
         font-size: large;
-        font-weight: 500;
+        font-weight: 400;
         color: #0b172a;
         margin-bottom: 10px;
         text-align: center;
         border-bottom: 1px solid #0b172a;
         text-transform: capitalize;
+        font-family: 'Oswald', sans-serif;
 
     }
     .filter h4:hover {
         color: white;
-        font-weight: 600;
+        font-weight: 500;
         font-size: larger;
+        border-bottom: 2px solid white;
     }
 
     .color{
@@ -176,12 +185,12 @@
 
 .headimg-men h2 {
     color: white;
-    font-size: 70px;
+    font-size: 80px;
     font-weight: 900;
-    
+    /* font-family: 'Oswald', sans-serif; */
     position: absolute;
-    top: 50%;
-    left: 9.5%;
+    top: 41%;
+    left: 8.5%;
     text-transform: capitalize;
     
 
@@ -197,7 +206,7 @@
     color: black;
     font-size: 70px;
     font-weight: 900;
-    
+    /* font-family: 'Oswald', sans-serif; */
     position: absolute;
     top: 45%;
     left: 9.5%;
@@ -207,4 +216,68 @@
    
         border-bottom: 1px solid black;
     }
+
+
+
+.img-women img {
+    border-bottom: rgb(11 23 42) 2px solid;
+    box-shadow: 0 0 14px 0 #000000cf;
+}
+
+.img-women h4 ,.img h4 {
+    text-transform: capitalize;
+    font-size: medium;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    margin: 10px 0;
+}
+
+.img-women p ,a {
+    text-transform: capitalize;
+    font-size: small;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    margin: 10px 0;
+}
+#divv1 {
+    margin-bottom: 10px;
+}
+#divv2,#divv4,#divv5,#divv6,#divv7,#divv8,#divv9,#div1,#div2,#div3,#div4
+#div5,#div6,#div7,#div8,#div9{
+    margin-bottom: 10px;
+}
+
+.img img {
+    border-bottom: rgb(255 235 205) 2px solid;
+    box-shadow: 0 0 10px 0 #e2dddd7d;
+}
+
+.img p ,a{
+    text-transform: capitalize;
+    font-size: small;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    margin: 10px 0;
+}
+
+.img-women h4:hover{
+    text-decoration: underline;
+}
+
+.img h4:hover{
+    text-decoration: underline;
+}
+
+.img a:hover{
+    padding: 0px 10px;
+    background-color: blanchedalmond;
+    color: black;
+
+}
+
+.img-women a:hover{
+    padding: 0px 10px;
+    background-color: black;
+    color: blanchedalmond;
+}
 
