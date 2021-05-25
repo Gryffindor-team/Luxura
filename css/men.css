@@ -16,7 +16,7 @@
     height: 500px;
 }
 
-.women-dress{
+.women-dress {
     background-image: url("../img/menImg/dress2.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -27,20 +27,17 @@
 
 .continer_img {
     width: 960px;
-    
     display: grid;
     grid-template-columns: 20% 70%;
-   
 }
 
-.women{
+.women {
     width: 960px;
     display: grid;
     grid-template-columns: 20% 70%;
     background-color: white;
     color: black;
     width: 100%;
-    
 }
 
 .img {
@@ -48,18 +45,16 @@
     grid-template-columns: repeat(3, auto);
     column-gap: 10px;
     margin-top: 10px;
-    
-   
 }
 
-.img-women{
+.img-women {
     display: grid;
     grid-template-columns: repeat(3, auto);
     column-gap: 10px;
     margin-top: 10px;
-
     margin-bottom: 20px;
 }
+
 
 /* for the filter */
 
@@ -103,7 +98,8 @@
 
 .black {
     background-color: #010101;
-    padding: 10px;;
+    padding: 10px;
+    ;
 }
 
 .red {
@@ -117,56 +113,59 @@
     border: 1px solid black;
     background-color: #0b172a;
     margin: 10px 0;
-    padding: 0 5px;}
+    padding: 0 5px;
+}
 
-    h4 ,p , #div1 ,#div2 , #div3 ,#div4 ,#div5 ,#div6 ,#divv1 
-    #divv2 ,#divv3 , #divv4 ,#divv5 , #divv6 {
-        margin: 5px 0;
-    }
+h4,
+p,
+#div1,
+#div2,
+#div3,
+#div4,
+#div5,
+#div6,
+#divv1 #divv2,
+#divv3,
+#divv4,
+#divv5,
+#divv6 {
+    margin: 5px 0;
+}
 
-    .continer_img{
-        background-color: black;
-        color: white;
-        width: 100%;
-       
-    }
-    .img {
-        margin-bottom: 20px;
-    }
-    #cartLogoNum{
-        background-color: transparent;
-        color: white;
-        font-size: medium;
-        text-decoration: underline;
-        position: relative;
-        top: 66px;
-        right: 10px;
-    }
+.continer_img {
+    background-color: black;
+    color: white;
+    width: 100%;
+}
 
-    .for-suit{
-        background-color: #0b172a;
+.img {
+    margin-bottom: 20px;
+}
+
+.for-suit {
+    background-color: #0b172a;
     color: white;
     padding: 5px 20px;
     margin: 5px;
     cursor: pointer;
-        
-    }
-    .filter h4 {
-        font-size: large;
-        font-weight: 500;
-        color: #0b172a;
-        margin-bottom: 10px;
-        text-align: center;
-        border-bottom: 1px solid #0b172a;
-        text-transform: capitalize;
+}
 
-    }
-    .filter h4:hover {
-        color: white;
-        font-weight: 600;
-        font-size: larger;
-    }
+.filter h4 {
+    font-size: large;
+    font-weight: 500;
+    color: #0b172a;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #0b172a;
+    text-transform: capitalize;
+}
 
-    .color{
-        cursor: pointer;
-    }
+.filter h4:hover {
+    color: white;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.color {
+    cursor: pointer;
+}
