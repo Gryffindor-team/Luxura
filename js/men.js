@@ -8,18 +8,18 @@ let productName=[];
 
 // ------------ global get the element 
 
-let div1 = document.getElementById("div1");
-let div2 = document.getElementById("div2");
-let div3 = document.getElementById("div3");
+// let div1 = document.getElementById("div1");
+// let div2 = document.getElementById("div2");
+// let div3 = document.getElementById("div3");
 
 
 
 
 
 
-let LeftElement = document.getElementById("left-image");
-let CenterElement = document.getElementById("Center-image");
-let RightElement = document.getElementById("Right-image");
+// let LeftElement = document.getElementById("left-image");
+// let CenterElement = document.getElementById("Center-image");
+// let RightElement = document.getElementById("Right-image");
 
 
 
@@ -47,7 +47,15 @@ new MenImges("blue-tuxedo", "../img/menImg/img1.jpg", 400);
 new MenImges("red-tuxedo", "../img/menImg/img1.jpg", 400);
 new MenImges("gray-suit", "../img/menImg/img1.jpg",200);
 new MenImges("gray-tuxedo", "../img/menImg/img1.jpg", 400);
-new MenImges("ronaldo-suit", "../img/menImg/img1.jpg", 500);
+new MenImges("dress1", "../img/menImg/img1.jpg", 400);
+new MenImges("dress2", "../img/menImg/img1.jpg", 300);
+new MenImges("dress3", "../img/menImg/img1.jpg", 500);
+new MenImges("dress4", "../img/menImg/img1.jpg", 600);
+new MenImges("dress5", "../img/menImg/img1.jpg", 600);
+new MenImges("dress6", "../img/menImg/img1.jpg", 400);
+new MenImges("dress7", "../img/menImg/img1.jpg", 500);
+new MenImges("dress8", "../img/menImg/img1.jpg", 300);
+new MenImges("dress9", "../img/menImg/img1.jpg", 650);
 
 
   
@@ -133,6 +141,8 @@ setItems(prodects);
       if(cartCost!==null){
         cartCost=parseInt(cartCost);
         localStorage.setItem('totalCost',cartCost + prodects.price);
+        // localStorage.setItem('totalCost',cartCost - prodects.price);
+        
       }
     else {
       localStorage.setItem('totalCost',prodects.price);
@@ -168,7 +178,7 @@ setItems(prodects);
 
   // ----------------------- function for render the img 
 
-  let div =[div1,div2,div3]
+  // let div =[div1,div2,div3]
 
   // function renderImgMen (){
      
