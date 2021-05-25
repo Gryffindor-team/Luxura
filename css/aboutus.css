@@ -5,7 +5,7 @@
 section
 {
     padding: 15px ;
-    background:wheat;
+    background:white;
 
 
 }
@@ -74,7 +74,8 @@ section
     height: 14rem;
     object-fit: cover;
     clip-path: polygon(0 0,100% 0%, 100% 69%, 0% 100%); 
-    border-radius:50px 50px;
+    border-top-left-radius:  10% 20%;
+    border-top-right-radius: 10% 20%;
 }
 /* information about the profile_img*/
 .profile_img
