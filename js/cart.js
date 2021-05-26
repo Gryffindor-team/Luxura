@@ -180,6 +180,43 @@ alert(`Your Order Has Been Confirmed MR: ${userName}`)
 
 
 
+// for feadback 
+
+function toggle_visibility() {
+    var e = document.getElementById('feedback-main');
+    if(e.style.display == 'block')
+       e.style.display = 'none';
+    else
+       e.style.display = 'block';
+ }
+
+ toggle_visibility();
+
+
+//  get element for feadback 
+let feedbacksubmit=document.getElementById('feedback-form1');
+feedbacksubmit.addEventListener('submit',feadSubmit);
+
+function feadSubmit(event){
+    
+    event.preventDefault();
+    let Name =event.target.feedback-name.value;
+    let Email=event.target.feedback-email.value;
+    let textare=event.target.feedback-comment.value;
+
+    let arrayFeadback=[Name,Email,textare];
+
+    
+        localStorage.setItem('feadback',JSON.stringify(arrayFeadback));
+      
+       
+    
+    location.reload();
+}
+
+
+
+
 
 
 // ///-----------for the poper 
