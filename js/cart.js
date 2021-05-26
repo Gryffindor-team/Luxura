@@ -134,12 +134,16 @@ function deleteButtons() {
 
             oldNumberCart();
             render();
+            location.reload();
             
         })
     }
+    if(cartCost==0){
+        localStorage.clear();
+    }
 }
 
-render();
+// render();
 let confirm = document.getElementById('for-confirm');
 let butConfirm = document.createElement('button');
 butConfirm.classList.add('confirmbutton');
