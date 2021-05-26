@@ -4,8 +4,7 @@
 ///------------- function to display the items 
 
 
-// let userName =prompt('please enter your name for Booking the oreder');
-// let userNumber =Number(prompt('please enter your number'));
+
 
 
 let cartCost;
@@ -155,18 +154,25 @@ butConfirm.addEventListener('click', () => {
     alert(`Your Order Will Booked After Submitting The Booking Form -- Thank You , And We Are Waitting For You And Your Total Price ${cartCost}`);
     localStorage.clear();
 
-    let form = document.getElementById('form').style.visibility = 'visible';
 
+    
 
-    let submit1 = document.getElementById('submit');
-    form.appendChild(submit);
-    submit1.addEventListener('submit', () => {
+    let form =document.getElementById('form');
+    form.style.visibility='visible';
+  form.addEventListener('submit',action);
+ function action (event){
+    
+     event.preventDefault();
+     let userName =event.target.name.value
+ 
+alert(`your order has been confirmed mester ${userName}`)
 
-        // document.getElementById('form').style.visibility='hidden'
-        alert('your order has been confirm');
-        // location.reload();
-
-    })
+     document.getElementById('form').reset();
+     location.reload();
+     
+    
+    
+ }
     
 
 })
