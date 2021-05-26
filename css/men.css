@@ -46,7 +46,7 @@
  
     display: grid;
     grid-template-columns: 20% 80%;
-    background-color: white;
+    background-color: #fde4d7d7;
     color: black;
     width: 100%;
 }
@@ -97,6 +97,8 @@
     padding: 12px 16px;
     background-color: #f1f1f1;
     cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 5px;
 }
 
 .btn:hover {
@@ -111,17 +113,19 @@
 .blue {
     background-color: #213361;
     padding: 10px;
+    margin-left: 5px;
 }
 
 .black {
     background-color: #010101;
     padding: 10px;
-    ;
+    margin-left: 5px;
 }
 
 .red {
     background-color: #834044;
     padding: 10px;
+    margin-left: 5px;
 }
 
 .add-cart {
@@ -139,7 +143,7 @@
     
 
     .continer_img{
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.849);
         color: white;
         width: 100%;
        
@@ -163,10 +167,27 @@
         color: #0b172a;
         margin-bottom: 10px;
         text-align: center;
-        border-bottom: 1px solid #0b172a;
+        /* border-bottom: 1px solid #0b172a; */
         text-transform: capitalize;
         font-family: 'Oswald', sans-serif;
 
+    }
+
+    #filter-women h4 {
+        font-size: large;
+        font-weight: 400;
+        color: #0b172a;
+        margin-bottom: 10px;
+        text-align: center;
+        /* border-bottom: 1px solid #0b172a; */
+        text-transform: capitalize;
+        font-family: 'Oswald', sans-serif;
+    }
+    #filter-women h4:hover{
+        color: black;
+        font-weight: 500;
+        font-size: larger;
+        border-bottom: 2px solid black;
     }
     .filter h4:hover {
         color: white;
@@ -230,6 +251,8 @@
     font-weight: 500;
     font-family: 'Oswald', sans-serif;
     margin: 10px 0;
+    text-align: center;
+    
 }
 
 .img-women p ,a {
@@ -237,7 +260,8 @@
     font-size: small;
     font-weight: 400;
     font-family: 'Oswald', sans-serif;
-    margin: 10px 0;
+    margin: 10px 223px 10px 0;
+    display: inline;
 }
 #divv1 {
     margin-bottom: 10px;
@@ -257,7 +281,8 @@
     font-size: small;
     font-weight: 400;
     font-family: 'Oswald', sans-serif;
-    margin: 10px 0;
+    margin: 10px 223px 10px 0;
+    display: inline;
 }
 
 .img-women h4:hover{
@@ -269,15 +294,31 @@
 }
 
 .img a:hover{
-    padding: 0px 10px;
+    
     background-color: blanchedalmond;
     color: black;
 
 }
 
 .img-women a:hover{
-    padding: 0px 10px;
+    /* padding: 0px 10px; */
     background-color: black;
     color: blanchedalmond;
 }
 
+
+
+.black1 {
+    background-color: #000000;
+    padding: 10px;
+    margin-left: 5px;
+}
+.white {
+    background-color: white;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.img-women h4 p a {
+    display: inline;
+}
