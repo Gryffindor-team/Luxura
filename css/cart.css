@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,12 +9,10 @@
 
 #carth2 {
     text-align: center;
-    font-size: 30px;
-    margin: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: block;
-    border: 1px solid black;
+    font-size: 45px;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 60px;
+    text-decoration: underline;
 }
 
 
@@ -138,6 +139,7 @@ body{
     margin-left: 5px;
     margin-right: 40px;
 }
+
 #submit {
     margin-left: 5px;
     background-color: #0b172a;
@@ -178,7 +180,8 @@ body{
     color: red;
 }
 
-.increase ,.decrease {
+.increase,
+.decrease {
     color: #0b172a;
 }
 /* 

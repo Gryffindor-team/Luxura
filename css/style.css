@@ -30,9 +30,18 @@ nav ul li {
 nav ul li a {
     padding: 20px;
     margin: 12px;
-    font-size: 20px;
+    font-size: 23px;
     text-decoration: none;
     color: blanchedalmond;
+    font-family: 'Lato', sans-serif;
+}
+
+nav ul li a:hover {
+    padding: 20px;
+    margin: 12px;
+    font-size: 23px;
+    text-decoration: none;
+    color: #ff9f0f;
     font-family: 'Lato', sans-serif;
 }
 
