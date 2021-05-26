@@ -15,6 +15,10 @@ function carousel() {
   setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 
+function myFunction(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
+
 // // let cart = [];
 // // let allImages = [];
 // // let menImages = [];
