@@ -18,10 +18,11 @@
 
 /* main */
 body{
-    background-image: url("https://wallpapercave.com/wp/fuIWAn6.jpg");
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_632/9dc83321465691.56301b404e86b.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
     
 }
 
@@ -236,17 +237,17 @@ html {
 }
 
 #feedback-div {
-    background-color: rgb(148 146 146 / 40%);
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-top: 35px;
-    padding-bottom: 50px;
-    width: 450px;
-    float: left;
-    left: 50%;
-    position: absolute;
-    margin-top: -400px;
-    margin-left: -232px;
+  background-color: rgb(148 146 146 / 40%);
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 35px;
+  padding-bottom: 50px;
+  width: 450px;
+  float: left;
+  left: 50%;
+  position: absolute;
+  margin-top: -775px;
+  margin-left: -232px;
    
 }
 
@@ -385,3 +386,7 @@ input:focus,
 }
 
 /* end feadback */
+.products-container {
+  background-color: rgba(255, 255, 255, 0.63);
+
+}
