@@ -111,14 +111,26 @@
 }
 
 #form {
-    visibility: hidden;
-    margin-left: 60px;
+    visibility:hidden;
+    margin-left: -57px;
+   
 }
 
 #form input {
-    width: 100px;
+    width: 250px;
+    height: 30px;
+    margin-left: 30%;
+    font-weight: bold;
+
     background-color: #0b172a;
     color: white;
+    border-radius:20px;
+    border-color:wheat;
+}
+#number
+{
+    width: 200;
+
 }
 
 #form label {
@@ -134,6 +146,7 @@
     background-color: #0b172a;
     color: white;
     padding: 3px 5px;
+    
 }
 
 .confirmbutton {
@@ -156,14 +169,17 @@
 }
 
 #forset {
-    width: 400px;
-    margin-left: 313px;
+    width:  600px;
+ 
+    margin-left: 400px;
     margin-bottom: 58px;
 }
 
 #lform {
-    font-size: 25px;
+    font-size: 50px;
+    
 }
+
 
 .delete {
     color: red;
