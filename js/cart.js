@@ -165,7 +165,7 @@ butConfirm.addEventListener('click', () => {
      event.preventDefault();
      let userName =event.target.name.value
  
-alert(`your order has been confirmed mester ${userName}`)
+alert(`Your Order Has Been Confirmed MR: ${userName}`)
 
      document.getElementById('form').reset();
      location.reload();
