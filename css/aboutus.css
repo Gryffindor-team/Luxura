@@ -57,7 +57,14 @@ main
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
-
+.heading{
+    text-align: center;
+      font-size: 45px;
+      font-family: 'Oswald', sans-serif;
+      
+      
+     margin-top: 30px;
+}
 
 /*proparity of card main*/
 

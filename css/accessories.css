@@ -248,3 +248,20 @@ h2{
     #aboutUs {
         text-decoration: none;
     }
+
+
+    /* for h2 of main */
+
+    .wh2{
+      text-align: center;
+      font-size: 45px;
+      font-family: 'Oswald', sans-serif;
+      
+      
+      text-decoration: underline;
+    }
+
+
+    footer {
+      margin-top: 30px;
+    }
