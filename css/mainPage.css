@@ -7,8 +7,10 @@
 .slideshow-container {
     max-width: 1300px;
     margin-top: 33px;
+    max-height: 400px;
     position: relative;
     margin: auto;
+    margin-bottom: 170px;
 }
 
 
@@ -220,7 +222,7 @@
     float: right;
     width: 505px;
     margin-top: -487px;
-    margin-right: 57px;
+    margin-right: 38px;
 }
 
 .leftimg {
@@ -242,7 +244,7 @@
     float: right;
     width: 505px;
     margin-top: -340px;
-    margin-right: 57px;
+    margin-right: 31px;
 }
 
 
