@@ -67,19 +67,26 @@ nav ul li a:hover {
 
 #socialMedia {
     display: inline-flex;
-    margin-bottom: 20px;
-    align-items: baseline
+    /* align-items: baseline */
 }
 
-.foot {
-    margin-left: 126px;
-    margin-right: 50px;
+.foot1 {
+    margin-right: 90px;
+    margin-top: 8px;
+}
+
+
+/* .foot2 {} */
+
+.foot3 {
+    margin-left: 43px;
 }
 
 .socialMediaListImg {
-    width: 100px;
+    width: 70px;
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 20px;
 }
 
 footer {

@@ -127,6 +127,10 @@
 }
 
 .HotOfferImg {
+    width: 300px;
+}
+
+.HotOfferImg1 {
     width: 200px;
 }
 
@@ -174,8 +178,8 @@
 .hotofferh3 {
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
-    margin-left: 35px;
-    margin-top: 5px;
+    margin-left: 166px;
+    margin-top: -31px;
 }
 
 
@@ -199,7 +203,7 @@
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-    margin-left: 25px;
+    margin-left: 68px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -254,7 +258,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    margin-left: 311px;
+    margin-left: 250px;
     margin-bottom: 90px;
     margin-top: 50px;
 }
@@ -295,8 +299,8 @@
 }
 
 .hotofferh4 {
-    margin-left: 34px;
-    margin-top: 12px;
+    margin-left: 5px;
+    margin-top: 16px;
     font-family: 'Oswald', sans-serif;
     font-size: 30px;
 }
