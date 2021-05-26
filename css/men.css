@@ -46,7 +46,7 @@
  
     display: grid;
     grid-template-columns: 20% 80%;
-    background-color: #e4e4e4;
+    background-color: #fde4d7d7;
     color: black;
     width: 100%;
 }
@@ -97,6 +97,8 @@
     padding: 12px 16px;
     background-color: #f1f1f1;
     cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 5px;
 }
 
 .btn:hover {
@@ -111,17 +113,19 @@
 .blue {
     background-color: #213361;
     padding: 10px;
+    margin-left: 5px;
 }
 
 .black {
     background-color: #010101;
     padding: 10px;
-    ;
+    margin-left: 5px;
 }
 
 .red {
     background-color: #834044;
     padding: 10px;
+    margin-left: 5px;
 }
 
 .add-cart {
@@ -247,6 +251,8 @@
     font-weight: 500;
     font-family: 'Oswald', sans-serif;
     margin: 10px 0;
+    text-align: center;
+    
 }
 
 .img-women p ,a {
@@ -254,7 +260,8 @@
     font-size: small;
     font-weight: 400;
     font-family: 'Oswald', sans-serif;
-    margin: 10px 0;
+    margin: 10px 223px 10px 0;
+    display: inline;
 }
 #divv1 {
     margin-bottom: 10px;
@@ -274,7 +281,8 @@
     font-size: small;
     font-weight: 400;
     font-family: 'Oswald', sans-serif;
-    margin: 10px 0;
+    margin: 10px 223px 10px 0;
+    display: inline;
 }
 
 .img-women h4:hover{
@@ -286,15 +294,31 @@
 }
 
 .img a:hover{
-    padding: 0px 10px;
+    
     background-color: blanchedalmond;
     color: black;
 
 }
 
 .img-women a:hover{
-    padding: 0px 10px;
+    /* padding: 0px 10px; */
     background-color: black;
     color: blanchedalmond;
 }
 
+
+
+.black1 {
+    background-color: #000000;
+    padding: 10px;
+    margin-left: 5px;
+}
+.white {
+    background-color: white;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.img-women h4 p a {
+    display: inline;
+}
