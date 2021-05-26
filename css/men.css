@@ -256,7 +256,7 @@
     
 }
 
-.img-women p ,a {
+.img-women p  {
     text-transform: capitalize;
     font-size: small;
     font-weight: 400;
@@ -277,12 +277,20 @@
     box-shadow: 0 0 10px 0 #e2dddd7d;
 }
 
-.img p ,a{
+.img p {
     text-transform: capitalize;
     font-size: small;
     font-weight: 400;
     font-family: 'Oswald', sans-serif;
     margin: 10px 223px 10px 0;
+    display: inline;
+}
+.add-cart{
+    text-transform: capitalize;
+    font-size: small;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    margin: 10px 0 10px 253px;
     display: inline;
 }
 
